@@ -23,8 +23,8 @@ app.use(cors(corsOptions));
 
 // Serve static files from the "uploads" directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-app.use(express.static('static'))
-// Set up routes
+// app.use(express.static('static'))
+// Set up routes 
 app.use('/', indexRouter);
 
 db.connect()
