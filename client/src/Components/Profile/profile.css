@@ -1,0 +1,1018 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+.profile .frame-child {
+    width: 360px;
+    height: 164px;
+    position: relative;
+    background-color: #fff;
+    display: none;
+    max-width: 100%;
+}
+
+.profile .vector-icon {
+    width: 8px;
+    height: 14.5px;
+    position: relative;
+    object-fit: contain;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.profile .vector-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 9px 0 0;
+}
+
+.profile .profile {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-block;
+    min-width: 70px;
+    z-index: 1;
+}
+
+.profile .frame-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 20px 0 0;
+    gap: 20px;
+}
+
+.profile .frame-item {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.profile .ellipse-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 1px;
+}
+
+.profile .sinan-abdulatif {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.profile .sinan-abdulatif,
+.profile .your-account-and {
+    position: relative;
+    flex-shrink: 0;
+    z-index: 1;
+    color: #020202;
+}
+
+.profile .your-account-and-details-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 2px;
+    margin-top: -3px;
+    font-size: 13px;
+    color: #848484;
+}
+
+.profile .frame-container,
+.profile .sinan-abdulatif-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.profile .frame-container {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 19px;
+}
+
+.profile .vector-icon1 {
+    width: 6px;
+    height: 10.9px;
+    position: relative;
+    z-index: 1;
+}
+
+.profile .vector-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 18.1px;
+}
+
+.profile .frame-group {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.profile .frame-wrapper,
+.profile .rectangle-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 2px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.profile .rectangle-parent {
+    margin-top: -180px;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 32px 18px 11px;
+    box-sizing: border-box;
+    gap: 39px;
+    max-width: 100%;
+    text-align: left;
+    font-size: 22px;
+    color: #111c30;
+    font-family: Poppins;
+}
+
+.profile .ellipse-div,
+.profile .frame-inner {
+    position: relative;
+    display: none;
+}
+
+.profile .frame-inner {
+    height: 79px;
+    width: 333px;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.profile .ellipse-div {
+    height: 47px;
+    width: 47px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    transform: rotate(90deg);
+}
+
+.profile .frame-child1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #31ba77;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.profile .div {
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 21px;
+    z-index: 3;
+}
+
+.profile .ellipse-parent {
+    height: 47px;
+    width: 47px;
+    position: relative;
+}
+
+.profile .youre-halfway-there {
+    position: relative;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.profile .verify-your-account {
+    position: relative;
+    font-size: 13px;
+    color: #6e6e6e;
+    z-index: 1;
+}
+
+.profile .frame-wrapper2,
+.profile .youre-halfway-there-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile .youre-halfway-there-parent {
+    justify-content: flex-start;
+    gap: 2px;
+}
+
+.profile .frame-wrapper2 {
+    justify-content: flex-end;
+    padding: 0 0 1px;
+    font-size: 14px;
+    color: #111c30;
+}
+
+.profile .frame-wrapper1,
+.profile .rectangle-group {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.profile .rectangle-group {
+    flex: 1;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 14px 10px;
+    gap: 11px;
+    cursor: pointer;
+}
+
+.profile .frame-wrapper1 {
+    align-self: stretch;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 1px 0 0;
+}
+
+.profile .frame-child2 {
+    height: 24px;
+    width: 97px;
+    margin: 0 !important;
+    position: absolute;
+    top: 14px;
+    left: 18px;
+}
+
+.profile .vector-icon2 {
+    width: 18px;
+    height: 18px;
+    position: relative;
+}
+
+.profile .vector-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+}
+
+.profile .settings {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 66px;
+}
+
+.profile .frame-parent4 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 13px;
+}
+
+.profile .vector-icon3 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.profile .vector-wrapper1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2px 0 0;
+}
+
+.profile .term-conditions {
+    position: relative;
+    font-weight: 500;
+}
+
+.profile .frame-parent3,
+.profile .frame-parent5 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.profile .frame-parent5 {
+    flex-direction: row;
+    gap: 11px;
+}
+
+.profile .frame-parent3 {
+    flex-direction: column;
+    gap: 23px;
+}
+
+.profile .vector-icon4,
+.profile .vector-icon5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 10.9px;
+}
+
+.profile .vector-icon5 {
+    top: 47px;
+}
+
+.profile .vector-parent {
+    width: 6px;
+    height: 57.9px;
+    position: relative;
+}
+
+.profile .frame-wrapper3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6.5px 0 0;
+}
+
+.profile .frame-parent1,
+.profile .frame-parent2 {
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.profile .frame-parent2 {
+    flex: 1;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 17px 15px 15px;
+    max-width: 100%;
+    gap: 20px;
+    z-index: 1;
+}
+
+.profile .frame-parent1 {
+    align-self: stretch;
+    padding: 0 0 0 4px;
+    position: relative;
+    text-align: left;
+    font-size: 16px;
+    color: #111c30;
+}
+
+.profile .android-large-13-inner,
+.profile .frame-div,
+.profile .frame-parent1 {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.profile .frame-div {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.profile .android-large-13-inner {
+    align-self: stretch;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 15px 6px 11px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 12px;
+    color: #31ba77;
+    font-family: Poppins;
+}
+
+.profile .rectangle-div {
+    width: 330px;
+    height: 105px;
+    position: relative;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+}
+
+.profile .vector-icon6 {
+    width: 20px;
+    height: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.profile .vector-wrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5px 0 0;
+}
+
+.profile .email {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 45px;
+    z-index: 2;
+    color: #020202;
+}
+
+.profile .frame-parent7 {
+    height: 24px;
+    width: 97px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 2px 0;
+    box-sizing: border-box;
+    gap: 11px;
+    z-index: 1;
+}
+
+.profile .vector-icon7 {
+    width: 6px;
+    height: 10.9px;
+    position: relative;
+    z-index: 1;
+}
+
+.profile .vector-wrapper3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 3.6px;
+}
+
+.profile .frame-parent6 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.profile .vector-icon8 {
+    width: 19.9px;
+    height: 20px;
+    position: relative;
+    flex-shrink: 0;
+
+    z-index: 1;
+}
+
+.profile .vector-wrapper4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+}
+
+.profile .whatsapp-us {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 108px;
+    flex-shrink: 0;
+    color: #020202;
+    z-index: 1;
+}
+
+.profile .frame-parent9 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 11.1px;
+    text-decoration: none;
+}
+
+.profile .vector-icon9 {
+    width: 6px;
+    height: 10.9px;
+    position: relative;
+    z-index: 1;
+}
+
+.profile .frame-parent8,
+.profile .vector-wrapper5 {
+    display: flex;
+    align-items: flex-start;
+}
+
+.profile .vector-wrapper5 {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 6.5px 0 0;
+}
+
+.profile .frame-parent8 {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.profile .android-large-13-child,
+.profile .rectangle-container {
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.profile .rectangle-container {
+    flex: 1;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 12px 15px 15px 13px;
+    gap: 26px;
+}
+
+.profile .android-large-13-child {
+    align-self: stretch;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 15px 6px;
+    text-align: left;
+    font-size: 16px;
+    color: #111c30;
+    font-family: Poppins;
+}
+
+.profile .frame-child3 {
+    height: 57px;
+    width: 330px;
+    position: relative;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+    z-index: 1;
+}
+
+.profile .group-icon {
+    height: 18.7px;
+    width: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.profile .frame-wrapper4 {
+    height: 24px;
+    width: 97px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1;
+}
+
+.profile .wold-academy {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Poppins;
+    color: #111c30;
+    text-align: left;
+    display: inline-block;
+    min-width: 124px;
+    z-index: 2;
+}
+
+.profile .wold-academy-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+    margin-left: -58px;
+}
+
+.profile .vector-icon10 {
+    height: 10.9px;
+    width: 6px;
+    position: absolute;
+    margin: 0 !important;
+    right: 16px;
+    bottom: 22.6px;
+    z-index: 1;
+}
+
+.profile .frame-button,
+.profile .frame-child4 {
+    position: relative;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.profile .frame-button {
+    cursor: pointer;
+    padding: 12px 14px 14px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.profile .frame-child4 {
+    height: 57px;
+    width: 330px;
+    display: none;
+    z-index: 0;
+}
+
+.profile .icon-earth {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    min-height: 25px;
+    z-index: 1;
+}
+
+.profile .exporter-portel {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Poppins;
+    color: #111c30;
+    text-align: left;
+    display: inline-block;
+    min-width: 116px;
+    z-index: 1;
+}
+
+.profile .exporter-portel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1px 0 0;
+}
+
+.profile .vector-icon11 {
+    height: 10.9px;
+    width: 6px;
+    position: absolute;
+    margin: 0 !important;
+    right: 16px;
+    bottom: 22.6px;
+    z-index: 1;
+}
+
+.profile .frame-child5,
+.profile .rectangle-parent1 {
+    position: relative;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.profile .rectangle-parent1 {
+    cursor: pointer;
+    padding: 14px 16px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.profile .frame-child5 {
+    height: 57px;
+    width: 330px;
+    display: none;
+}
+
+.profile .vector-icon12,
+.profile .vector-icon13 {
+    position: absolute;
+    top: 1.3px;
+    left: 0;
+    width: 22.9px;
+    height: 19.3px;
+    z-index: 1;
+}
+
+.profile .vector-icon13 {
+    top: 0.1px;
+    left: 41.1px;
+    width: 15.2px;
+    height: 20.8px;
+}
+
+.profile .vector-icon14,
+.profile .vector-icon15 {
+    position: absolute;
+    top: 5.8px;
+    left: 20.7px;
+    width: 15px;
+    height: 15px;
+    z-index: 2;
+}
+
+.profile .vector-icon15 {
+    top: 0;
+    left: 36.4px;
+    width: 4px;
+    height: 20.6px;
+    z-index: 1;
+}
+
+.profile .vector-icon16,
+.profile .vector-icon17 {
+    position: absolute;
+    top: 16.4px;
+    left: 57.6px;
+    width: 4.6px;
+    height: 4.6px;
+    z-index: 1;
+}
+
+.profile .vector-icon17 {
+    top: 22.3px;
+    left: 33.4px;
+    width: 0.3px;
+    height: 0.3px;
+}
+
+.profile .vector-group {
+    align-self: stretch;
+    height: 22.6px;
+    position: relative;
+}
+
+.profile .frame-wrapper5 {
+    width: 62.2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2.6px 0 0;
+    box-sizing: border-box;
+}
+
+.profile .owners {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 80px;
+    z-index: 2;
+    color: #020202;
+}
+
+.profile .frame-parent11 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.profile .frame-child6 {
+    width: 6px;
+    height: 10.9px;
+    position: relative;
+    z-index: 1;
+}
+
+.profile .frame-wrapper6 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8.5px 0 0;
+}
+
+.profile .rectangle-parent2 {
+    align-self: stretch;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 13px 17px 9px;
+    max-width: 100%;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.profile .frame-parent10,
+.profile .frame-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.profile .frame-parent10 {
+    flex: 1;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.profile .frame-section {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 15px 67px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 20.9px;
+    color: #020202;
+    font-family: Poppins;
+}
+
+.profile .frame-icon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.profile .frame-wrapper7 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+}
+
+.profile .car,
+.profile .saving {
+    position: relative;
+    display: inline-block;
+}
+
+.profile .car {
+    width: 28px;
+    height: 22px;
+    line-height: 140%;
+    font-weight: 600;
+}
+
+.profile .saving {
+    align-self: stretch;
+    height: 20px;
+    font-size: 14px;
+    line-height: 145%;
+    color: #707070;
+}
+
+.profile .car-parent,
+.profile .frame-parent12 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.profile .car-parent {
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profile .frame-parent12 {
+    width: 97px;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.div1 {
+    align-self: stretch;
+    height: 22px;
+    position: relative;
+    line-height: 140%;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.profile .frame-footer,
+.profile .wrapper {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.profile .wrapper {
+    width: 65px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 12px 0 0;
+    color: #e25c5c;
+}
+
+.profile .frame-footer {
+    flex: 1;
+    border-radius: 8px;
+    background-color: #fff;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px;
+    max-width: 100%;
+    gap: 20px;
+    text-align: left;
+    font-size: 16px;
+    color: #242424;
+    font-family: Inter;
+}
+
+.profile .android-large-13,
+.profile .android-large-13-inner1,
+.profile {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.profile .android-large-13-inner1 {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 16px 0 17px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.profile .android-large-13,
+.profile {
+    overflow: hidden;
+}
+
+.profile .android-large-13 {
+    height: 800px;
+    flex: 1;
+    background-color: #f6f7f9;
+    flex-direction: column;
+    padding: 175px 0 67px;
+    box-sizing: border-box;
+    gap: 16px;
+    max-width: 100%;
+}
+
+.profile {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    flex-direction: row;
+    line-height: normal;
+    letter-spacing: normal;
+}

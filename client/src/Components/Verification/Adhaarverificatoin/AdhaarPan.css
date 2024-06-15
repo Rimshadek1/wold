@@ -1,0 +1,428 @@
+.adhaarpan .upload-your-aadhaar {
+    text-decoration: none;
+    position: relative;
+    font-weight: 600;
+    color: inherit;
+}
+
+.adhaarpan .upload-your-aadhaar-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 4px;
+}
+
+.adhaarpan .frame-child {
+    height: 55px;
+    width: 333px;
+    position: relative;
+    border-radius: 9px;
+    background-color: #fff;
+    display: none;
+    max-width: 100%;
+}
+
+.adhaarpan .frame-item {
+    height: 30px;
+    width: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.adhaarpan .aadhaar-front-upload {
+    align-self: stretch;
+    position: relative;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.adhaarpan .aadhaar-front-upload-wrapper {
+    flex: 1;
+    flex-direction: column;
+    padding: 9px 0 0;
+}
+
+.adhaarpan .aadhaar-front-upload-wrapper,
+.adhaarpan .frame-group,
+.adhaarpan .frame-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.adhaarpan .frame-group {
+    align-self: stretch;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.adhaarpan .frame-wrapper {
+    flex: 1;
+    flex-direction: column;
+    padding: 1px 0 0;
+}
+
+.adhaarpan .div {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 15px;
+    z-index: 1;
+}
+
+.adhaarpan .frame-inner,
+.adhaarpan .rectangle-parent {
+    border-radius: 9px;
+    background-color: #fff;
+    max-width: 100%;
+}
+
+.adhaarpan .rectangle-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 19px 12px 20px;
+    box-sizing: border-box;
+    gap: 24px;
+}
+
+.adhaarpan .frame-inner {
+    height: 55px;
+    width: 333px;
+    position: relative;
+    display: none;
+}
+
+.adhaarpan .group-icon {
+    height: 30px;
+    width: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.aadhaar-back-upload {
+    align-self: stretch;
+    position: relative;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.adhaarpan .aadhaar-back-upload-wrapper {
+    flex: 1;
+    flex-direction: column;
+    padding: 9px 0 0;
+}
+
+.adhaarpan .aadhaar-back-upload-wrapper,
+.adhaarpan .frame-div,
+.adhaarpan .frame-parent1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.adhaarpan .frame-parent1 {
+    align-self: stretch;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.adhaarpan .frame-div {
+    flex: 1;
+    flex-direction: column;
+    padding: 1px 0 0;
+}
+
+.adhaarpan .div1 {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 15px;
+    z-index: 1;
+}
+
+.adhaarpan .frame-container,
+.adhaarpan .frame-textarea,
+.adhaarpan .rectangle-group {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.adhaarpan .rectangle-group {
+    flex: 1;
+    border-radius: 9px;
+    background-color: #fff;
+    flex-direction: row;
+    padding: 12px 19px 12px 20px;
+    gap: 24px;
+    max-width: 100%;
+}
+
+.adhaarpan .frame-container,
+.adhaarpan .frame-textarea {
+    align-self: stretch;
+}
+
+.adhaarpan .frame-container {
+    flex-direction: row;
+    padding: 0 0 21px;
+    max-width: 100%;
+}
+
+.adhaarpan .frame-textarea {
+    border: 0;
+    background-color: transparent;
+    height: 98px;
+    width: auto;
+    outline: 0;
+    flex-direction: column;
+    padding: 0 7px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    color: #111c30;
+}
+
+.adhaarpan .enter-your-dob {
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 119px;
+}
+
+.adhaarpan .enter-your-dob-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 3px;
+}
+
+.adhaarpan .group-input {
+    border: 1px solid #31ba77;
+    outline: 0;
+    background-color: #fff;
+    align-self: stretch;
+    height: 57px;
+    position: relative;
+    border-radius: 9px;
+    box-sizing: border-box;
+    min-width: 197px;
+}
+
+.adhaarpan .frame-parent,
+.adhaarpan .frame-parent2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 4px;
+    gap: 9px;
+    font-size: 16px;
+    color: #111c30;
+    font-family: Inter;
+}
+
+.adhaarpan .frame-parent {
+    align-items: flex-end;
+    padding: 0 1px 147px 0;
+    box-sizing: border-box;
+    gap: 19px;
+    max-width: 100%;
+    text-align: left;
+    font-size: 11px;
+    color: #000;
+    font-family: Poppins;
+}
+
+.adhaarpan .rectangle-div {
+    height: 46px;
+    width: 324px;
+    position: relative;
+    border-radius: 9px;
+    background-color: #111c30;
+    display: none;
+    max-width: 100%;
+}
+
+.adhaarpan .verify {
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Poppins;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    min-width: 45px;
+    z-index: 1;
+}
+
+.adhaarpan .frame-wrapper1,
+.adhaarpan .rectangle-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.adhaarpan .rectangle-container {
+    cursor: pointer;
+    border: 0;
+    padding: 11px 20px 12px 21px;
+    background-color: #111c30;
+    flex: 1;
+    border-radius: 9px;
+    justify-content: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.adhaarpan .frame-wrapper1 {
+    align-self: stretch;
+    justify-content: flex-start;
+    padding: 0 2px 0 1px;
+}
+
+.adhaarpan .kit-panel-solar-bombillos-bat {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.adhaarpan .kit-panel-solar-bombillos-bat-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+}
+
+.adhaarpan .car,
+.adhaarpan .saving {
+    position: relative;
+    display: inline-block;
+}
+
+.adhaarpan .car {
+    width: 28px;
+    height: 22px;
+    line-height: 140%;
+    font-weight: 600;
+}
+
+.adhaarpan .saving {
+    align-self: stretch;
+    height: 20px;
+    font-size: 14px;
+    line-height: 145%;
+    color: #707070;
+}
+
+.adhaarpan .car-parent,
+.adhaarpan .frame-parent4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.adhaarpan .car-parent {
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.adhaarpan .frame-parent4 {
+    width: 97px;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.adhaarpan .b {
+    align-self: stretch;
+    height: 22px;
+    position: relative;
+    line-height: 140%;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.adhaarpan .frame-footer,
+.adhaarpan .wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.adhaarpan .wrapper {
+    width: 65px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 12px 0 0;
+    box-sizing: border-box;
+    color: #e25c5c;
+}
+
+.adhaarpan .frame-footer {
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #fff;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px;
+    flex-shrink: 0;
+    gap: 20px;
+    text-align: left;
+    font-size: 16px;
+    color: #242424;
+    font-family: Inter;
+}
+
+.adhaarpan .frame-parent3 {
+    height: 58px;
+    flex: 1;
+    flex-direction: column;
+    padding: 0 0 12px;
+    gap: 28px;
+    max-width: 100%;
+}
+
+.adhaarpan,
+.adhaarpan .android-large-19-inner,
+.adhaarpan .frame-parent3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.adhaarpan .android-large-19-inner {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 3px 0 4px;
+    max-width: 100%;
+}
+
+.adhaarpan {
+    width: 100%;
+    position: relative;
+    background-color: #f6f7f9;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 82px 13px 0;
+    gap: 56px;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    font-size: 20px;
+    color: #111c30;
+    font-family: Poppins;
+}

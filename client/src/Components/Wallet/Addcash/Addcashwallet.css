@@ -1,0 +1,230 @@
+.deposit .content-child {
+    height: 85px;
+    width: 360px;
+    position: relative;
+    background-color: #fff;
+    display: none;
+    max-width: 100%;
+}
+
+.deposit .bookid-icon {
+    width: 8px;
+    height: 14.5px;
+    position: relative;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.deposit .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5.8px 0 0;
+}
+
+.deposit .withdraw {
+    text-decoration: none;
+    position: relative;
+    font-weight: 600;
+    color: inherit;
+    display: inline-block;
+    min-width: 80px;
+    z-index: 1;
+}
+
+.deposit .content {
+    align-self: stretch;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 45px 27px 16px;
+    box-sizing: border-box;
+    gap: 102px;
+    max-width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #111c30;
+    font-family: Poppins;
+}
+
+.deposit .layout-child {
+    width: 249px;
+    height: 4px;
+    position: relative;
+    border-top: 4px solid #31ba77;
+    box-sizing: border-box;
+}
+
+.deposit .layout {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    top: 0;
+    z-index: 99;
+    position: sticky;
+    max-width: 100%;
+}
+
+.deposit .wallet-balance {
+    position: relative;
+    font-weight: 600;
+    white-space: pre-wrap;
+}
+
+.deposit .balance-container,
+.deposit .balance-label,
+.deposit .withdraw-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.deposit .balance-label {
+    flex-direction: row;
+    padding: 0 2px;
+}
+
+.deposit .balance-container,
+.deposit .withdraw-container {
+    flex-direction: column;
+    font-size: 16px;
+    color: #111c30;
+}
+
+.deposit .withdraw-container {
+    border: 2;
+    border-color: #31ba77;
+    background-color: transparent;
+    height: 60px;
+    width: auto;
+    outline: 0;
+    align-self: stretch;
+    padding: 0 3px;
+    box-sizing: border-box;
+    font-family: Inter;
+    font-weight: 600;
+    border-radius: 9px;
+}
+
+.deposit .balance-container {
+    flex: 1;
+    gap: 39px;
+    max-width: 100%;
+    text-align: right;
+    font-family: Poppins;
+}
+
+.deposit .frame-child,
+.deposit .sidebar {
+    align-self: stretch;
+    max-width: 100%;
+}
+
+.deposit .sidebar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 15px 437px 16px;
+    box-sizing: border-box;
+}
+
+.deposit .frame-child {
+    width: 324px;
+    border-radius: 9px;
+    background-color: #111c30;
+}
+
+.deposit .frame-child,
+.deposit .frame-item,
+.deposit .send-code {
+    position: relative;
+    display: none;
+}
+
+.deposit .send-code {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Poppins;
+    color: #fff;
+    text-align: center;
+    min-width: 81px;
+}
+
+.deposit .frame-item {
+    height: 46px;
+    width: 324px;
+    border-radius: 9px;
+    background-color: #111c30;
+    max-width: 100%;
+}
+
+.deposit .continue {
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Poppins;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    min-width: 71px;
+    z-index: 1;
+}
+
+.deposit .send-code-parent {
+    flex: 1;
+    border-radius: 9px;
+    background-color: #111c30;
+    justify-content: center;
+    padding: 11px 20px 12px 21px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.deposit .button-container,
+.deposit .rectangle-parent,
+.deposit .send-code-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.deposit .rectangle-parent {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: #111c30;
+    flex: 1;
+    border-radius: 9px;
+    justify-content: flex-start;
+}
+
+.deposit .button-container {
+    align-self: stretch;
+    justify-content: flex-end;
+    padding: 0 18px;
+    box-sizing: border-box;
+}
+
+.deposit {
+    width: 100%;
+    position: relative;
+    background-color: #f6f7f9;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 0 14px;
+    box-sizing: border-box;
+    gap: 31px;
+    line-height: normal;
+    letter-spacing: normal;
+}

@@ -1,0 +1,279 @@
+.android-large-22 .header-child {
+    height: 85px;
+    width: 360px;
+    position: relative;
+    background-color: #fff;
+    display: none;
+    max-width: 100%;
+}
+
+.android-large-22 .vector-icon {
+    width: 8px;
+    height: 14.5px;
+    position: relative;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.android-large-22 .vector-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5.8px 0 0;
+}
+
+.android-large-22 .login {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Poppins-SemiBold", Helvetica;
+    color: #111c30;
+    text-align: center;
+    display: inline-block;
+    min-width: 44px;
+    z-index: 1;
+}
+
+.android-large-22 .divider,
+.android-large-22 .header {
+    box-sizing: border-box;
+}
+
+.android-large-22 .header {
+    align-self: stretch;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 45px 27px 16px;
+    gap: 120px;
+    top: 0;
+    z-index: 99;
+    position: sticky;
+    max-width: 100%;
+}
+
+.android-large-22 .divider {
+    margin-left: -3px;
+    margin-bottom: 13px;
+    width: 103px;
+    height: 4px;
+    position: relative;
+    border-top: 4px solid #31ba77;
+}
+
+.android-large-22 .login1 {
+    margin: 0;
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Poppins-SemiBold", Helvetica;
+    color: #111c30;
+    text-align: left;
+    display: inline-block;
+    min-width: 66px;
+}
+
+.android-large-22 .footer-login {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 15px 15px;
+}
+
+.android-large-22 .email-address {
+    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Poppins-SemiBold", Helvetica;
+    color: #111c30;
+    text-align: left;
+    display: inline-block;
+    min-width: 95px;
+}
+
+.android-large-22 .email-field {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 15px 15px;
+}
+
+.android-large-22 .frame-child {
+    border: 1px solid #31ba77;
+    outline: 0;
+    background-color: #fff;
+    height: 57px;
+    flex: 1;
+    position: relative;
+    border-radius: 9px;
+    box-sizing: border-box;
+    min-width: 197px;
+    max-width: 100%;
+    font-size: 22px;
+}
+
+.android-large-22 .android-large-22-inner {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 16px 53px 15px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.android-large-22 .password {
+    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Poppins-SemiBold", Helvetica;
+    color: #111c30;
+    text-align: left;
+    display: inline-block;
+    min-width: 65px;
+}
+
+.android-large-22 .password-field {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 15px 0px;
+}
+
+.android-large-22 .frame-item {
+    border: 1px solid #d0d0d0;
+    outline: 0;
+    background-color: #fff;
+    height: 57px;
+    flex: 1;
+    position: relative;
+    border-radius: 9px;
+    box-sizing: border-box;
+    min-width: 197px;
+    max-width: 100%;
+}
+
+.android-large-22 .android-large-22-child {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 16px 27px 15px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.android-large-22 .frame-inner {
+    height: 46px;
+    width: 324px;
+    position: relative;
+    border-radius: 9px;
+    background-color: #111c30;
+    display: none;
+    max-width: 100%;
+}
+
+.android-large-22 .login2 {
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Poppins-SemiBold", Helvetica;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    min-width: 41px;
+    z-index: 1;
+}
+
+.android-large-22 .frame-div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.android-large-22 .rectangle-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.android-large-22 .rectangle-parent {
+    cursor: pointer;
+    border: 0;
+    padding: 11px 20px 12px 21px;
+    background-color: #111c30;
+    flex: 1;
+    border-radius: 9px;
+    justify-content: center;
+}
+
+.android-large-22 .frame-div {
+    align-self: stretch;
+    justify-content: flex-start;
+    padding: 0 18px 22px;
+}
+
+.android-large-22 .forget-password {
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Poppins-SemiBold", Helvetica;
+    color: #31ba77;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.android-large-22 .forget-password-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 21px 0 20px;
+}
+
+.android-large-22 {
+    margin: 0;
+    width: 100%;
+    position: relative;
+    background-color: #f6f7f9;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 295px;
+    box-sizing: border-box;
+    gap: 2px;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.android-large-22 .signup-link-wrapper {
+    width: 100%;
+}
+
+.android-large-22 .signup-link {
+    text-align: center;
+}
+
+.signups {
+    color: #111c30;
+}
+
+.signups:hover {
+    color: #002872;
+}

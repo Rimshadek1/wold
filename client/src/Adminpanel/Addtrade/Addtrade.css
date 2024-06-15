@@ -1,0 +1,108 @@
+.addtrade-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ddd;
+    /* Add a subtle border */
+    border-radius: 5px;
+    /* Add gentle rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Add a slight shadow for depth */
+    margin: 20px auto;
+    /* Center the form vertically on the screen */
+    max-width: 600px;
+    /* Set a maximum width for responsiveness */
+}
+
+/* Heading with a decorative underline */
+.addtrade-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    position: relative;
+    /* Enable positioning for the underline */
+}
+
+.addtrade-container h2::after {
+    content: "";
+    /* Add an empty pseudo-element for the underline */
+    display: block;
+    width: 100%;
+    /* Stretch the underline across the entire heading */
+    height: 3px;
+    /* Set the height of the underline */
+    background-color: #4CAF50;
+    /* Green color for the underline */
+    position: absolute;
+    /* Position the underline at the bottom */
+    bottom: 0;
+    /* Align the underline to the bottom of the heading */
+    left: 0;
+    /* Start the underline at the left edge */
+}
+
+/* Form styling */
+.addtrade-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Form group styling */
+.addtrade-container .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow labels to wrap to the next line on small screens */
+}
+
+/* Label styles */
+.addtrade-container label {
+    flex: 0 0 30%;
+    /* Set a fixed width for labels (adjust as needed) */
+    text-align: right;
+    /* Align labels to the right */
+    margin-bottom: 5px;
+    /* Add some space between label and input */
+}
+
+/* Input styles */
+.addtrade-container input[type="text"],
+.addtrade-container input[type="number"],
+.addtrade-container input[type="date"],
+.addtrade-container select {
+    flex: 1 1 70%;
+    /* Allow inputs to fill the remaining space */
+    padding: 10px;
+    /* Add padding for a nicer look */
+    border: 1px solid #ccc;
+    /* Add a thin border */
+    border-radius: 3px;
+    /* Add rounded corners */
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect input width */
+}
+
+/* Select element styles (optional) */
+.addtrade-container select {
+    appearance: none;
+    /* Remove default select appearance for styling */
+    background-image: url("data:image/svg+xml;base64,phN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCbG9jayI9Ii0wLjIgLTAuMiAxNSAxNSIgdmlld0VyZXZpbD0icHV0byIgZmlsbD0iIzMzMzMzMyI+PHBhdGggZD0iTCA2LjIgNy42bDMuNC0zLjQgNS42IDUuNiYzQzAuNTYuNTYuNTYuNTYuNTYuNTZMNjQuMiAxMi4ybDIuOC0yLjgiLz48L3N2Zz4=");
+    /* Add a custom dropdown arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    /* Position the icon */
+}
+
+/* Submit button styling */
+.addtrade-container button[type="submit"] {
+    background-color: #4CAF50;
+    /* Green color for the button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

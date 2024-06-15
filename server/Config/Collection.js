@@ -1,0 +1,16 @@
+module.exports = {
+    userCollection: 'userdata',
+    otpCollection: 'otp',
+    tradeCollection: 'trades',
+    orderedCollection: 'Transaction-orders',
+    depositCollection: 'Deposits',
+    withdrawRequestCollection: 'withdrawrequests',
+    transactionCollection: 'acceptransactions',
+    purchasedCollection: 'purchased',
+    profitCollection: 'profitoftrade',
+    mobileOtpCollection: 'mobileotp',
+    adhaarveriCollection: 'Adhaarverification',
+    investCollection: 'InvestOwner',
+    investFundCollection: 'InvestOwnerFund',
+    investStockCollection: 'InvestStockPrice',
+}

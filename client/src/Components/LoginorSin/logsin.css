@@ -1,0 +1,154 @@
+.android-larges {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.android-larges .div {
+    background-color: #ffffff;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+    width: 360px;
+}
+
+.android-larges .overlap {
+    height: 255px;
+    left: -43px;
+    position: absolute;
+    top: 164px;
+    width: 445px;
+}
+
+.android-larges .rectangle {
+    background-color: #42ce8f;
+    border-radius: 10px;
+    height: 66px;
+    left: 8px;
+    position: absolute;
+    top: 49px;
+    width: 69px;
+}
+
+.android-larges .group {
+    height: 255px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 445px;
+}
+
+.android-larges .img {
+    height: 170px;
+    left: 138px;
+    object-fit: cover;
+    position: absolute;
+    top: -5px;
+    width: 170px;
+}
+
+.android-larges .rectangle-2 {
+    height: 126px;
+    left: 326px;
+    object-fit: cover;
+    position: absolute;
+    top: 140px;
+    width: 77px;
+}
+
+.android-larges .rectangle-3 {
+    height: 126px;
+    left: 43px;
+    object-fit: cover;
+    position: absolute;
+    top: 98px;
+    width: 76px;
+}
+
+.android-larges .rectangle-4 {
+    background-color: #42ce8f;
+    border-radius: 10px;
+    height: 66px;
+    left: 316px;
+    position: absolute;
+    top: 31px;
+    width: 69px;
+}
+
+.android-larges .the-modern-way-for {
+    color: #111c30;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 18.5px;
+    font-weight: 600;
+    left: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 483px;
+}
+
+.android-larges .overlap-group {
+    background-color: #111c30;
+    border-radius: 9px;
+    height: 46px;
+    left: 18px;
+    position: absolute;
+    top: 633px;
+    width: 324px;
+}
+
+.android-larges .text-wrapper {
+    color: #ffffff;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 15px;
+    font-weight: 600;
+    left: 133px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    text-decoration: none;
+}
+
+.android-larges .div-wrapper {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #b9b9b9;
+    border-radius: 9px;
+    height: 46px;
+    left: 18px;
+    position: absolute;
+    top: 689px;
+    width: 324px;
+}
+
+.android-larges .text-wrapper-2 {
+    color: #111c30;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 15px;
+    font-weight: 600;
+    left: 141px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 9px;
+    text-decoration: none;
+}
+
+.android-larges .text-wrapper-3 {
+    color: #42ce8f;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 18.5px;
+    font-weight: 600;
+    left: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 43px;
+}

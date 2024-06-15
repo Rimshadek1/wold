@@ -1,0 +1,244 @@
+.numberveri .frame-child {
+    height: 85px;
+    width: 360px;
+    position: relative;
+    background-color: #fff;
+    display: none;
+    max-width: 100%;
+}
+
+.numberveri .vector-icon {
+    width: 8px;
+    height: 14.5px;
+    position: relative;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.numberveri .vector-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5.8px 0 0;
+}
+
+.numberveri .create-investment-account {
+    position: relative;
+    font-weight: 600;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.numberveri .rectangle-parent {
+    align-self: stretch;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 45px 27px 16px;
+    box-sizing: border-box;
+    gap: 30px;
+    top: 0;
+    z-index: 99;
+    position: sticky;
+    max-width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #111c30;
+    font-family: Poppins;
+}
+
+.numberveri .frame-item {
+    height: 4px;
+    flex: 1;
+    position: relative;
+    border-top: 4px solid #31ba77;
+    box-sizing: border-box;
+}
+
+.numberveri .android-large-8-inner {
+    width: 265px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 20px 13px 0;
+    box-sizing: border-box;
+}
+
+.numberveri .rimz {
+    color: #4cc891;
+}
+
+.numberveri .welcome-to-wold-container {
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.numberveri .enter-your-mobile,
+.numberveri .welcome-to-wold-container,
+.numberveri .well-text-you {
+    position: relative;
+    font-weight: 600;
+}
+
+.numberveri .well-text-you {
+    font-size: 14px;
+    font-weight: 500;
+    color: #686868;
+}
+
+.numberveri .enter-your-mobile-number-parent,
+.numberveri .frame-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.numberveri .enter-your-mobile-number-parent {
+    flex-direction: column;
+    gap: 3px;
+}
+
+.numberveri .frame-wrapper {
+    flex-direction: row;
+    padding: 0 2px;
+    font-size: 16px;
+}
+
+.numberveri .frame-inner {
+    height: 57px;
+    width: 329px;
+    position: relative;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #31ba77;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+}
+
+.numberveri .input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-weight: 500;
+    font-family: Inter;
+    font-size: 22px;
+    background-color: transparent;
+    height: 17px;
+    position: relative;
+    color: #000;
+    text-align: left;
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0;
+    z-index: 1;
+    margin: 4px;
+}
+
+.numberveri .rectangle-group {
+    align-self: stretch;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #31ba77;
+    box-sizing: border-box;
+    flex-direction: row;
+    padding: 18px 19px;
+}
+
+.numberveri .android-large-8-child,
+.numberveri .rectangle-group,
+.numberveri .welcome-to-wold-rimz-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.numberveri .welcome-to-wold-rimz-parent {
+    flex: 1;
+    flex-direction: column;
+    gap: 22.5px;
+    text-align: left;
+    font-size: 22px;
+    color: #111c30;
+    font-family: Inter;
+}
+
+.numberveri .android-large-8-child {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 15px 458px 16px;
+    box-sizing: border-box;
+}
+
+.numberveri .rectangle-div {
+    height: 46px;
+    width: 324px;
+    position: relative;
+    border-radius: 9px;
+    background-color: #111c30;
+    display: none;
+    max-width: 100%;
+}
+
+.numberveri .send-code {
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Poppins;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    min-width: 81px;
+    z-index: 1;
+}
+
+.numberveri,
+.numberveri .frame-footer,
+.numberveri .rectangle-container {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.numberveri .rectangle-container {
+    cursor: pointer;
+    border: 0;
+    padding: 11px 20px 12px 21px;
+    background-color: #111c30;
+    flex: 1;
+    border-radius: 9px;
+    flex-direction: row;
+    justify-content: center;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.numberveri,
+.numberveri .frame-footer {
+    justify-content: flex-start;
+}
+
+.numberveri .frame-footer {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 18px;
+    max-width: 100%;
+}
+
+.numberveri {
+    width: 100%;
+    position: relative;
+    background-color: #f6f7f9;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 0 0 14px;
+    gap: 4px;
+    line-height: normal;
+    letter-spacing: normal;
+}

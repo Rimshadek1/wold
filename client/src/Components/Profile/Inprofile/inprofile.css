@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+.inprofile .frame-child {
+    width: 360px;
+    height: 164px;
+    position: relative;
+    background-color: #fff;
+    display: none;
+    max-width: 100%;
+}
+
+.inprofile .vector-icon {
+    width: 8px;
+    height: 14.5px;
+    position: relative;
+    object-fit: contain;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.inprofile .vector-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 9px 0 0;
+}
+
+.inprofile .profile {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-block;
+    min-width: 70px;
+    z-index: 1;
+}
+
+.inprofile .frame-group,
+.inprofile .frame-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.inprofile .frame-group {
+    flex: 1;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.inprofile .frame-wrapper {
+    align-self: stretch;
+    justify-content: flex-start;
+    padding: 0 12px 0 4px;
+}
+
+.inprofile .frame-item {
+    height: 48px;
+    width: 48px;
+    position: relative;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.inprofile .sinan-abdulatif {
+    position: relative;
+    font-weight: 500;
+    z-index: 1;
+    width: 100%;
+    right: 90px;
+}
+
+.inprofile .wolder-since-may {
+    position: absolute;
+    margin: 0 !important;
+    right: 50px;
+    bottom: -18px;
+    font-size: 13px;
+    color: #a4a4a4;
+    z-index: 2;
+    width: 100%;
+}
+
+.inprofile .sinan-abdulatif-parent {
+    flex-direction: row;
+    position: relative;
+}
+
+.inprofile .ellipse-parent,
+.inprofile .frame-div,
+.inprofile .sinan-abdulatif-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.inprofile .sinan-abdulatif-parent {
+    width: 100%;
+}
+
+.inprofile .frame-div {
+    flex-direction: column;
+    padding: 2px 0 0;
+    width: 100%;
+}
+
+.inprofile .ellipse-parent {
+    flex-direction: row;
+    gap: 19px;
+    width: 100%;
+}
+
+.inprofile .vector-icon1 {
+    width: 6px;
+    height: 10.9px;
+    position: relative;
+    z-index: 1;
+}
+
+.inprofile .vector-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 17.1px;
+}
+
+.inprofile .frame-container {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.inprofile .frame-inner,
+.inprofile .rectangle-parent {
+    background-color: #fff;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.inprofile .rectangle-parent {
+    margin-top: -181px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 36px 20px 12px;
+    gap: 35px;
+    flex-shrink: 0;
+
+}
+
+.inprofile .frame-inner {
+    width: 330px;
+    height: 157px;
+    position: relative;
+    border-radius: 9px;
+    border: 1px solid #e0e0e0;
+    display: none;
+}
+
+.inprofile .frame-child1 {
+    width: 97px;
+    height: 24px;
+    display: none;
+}
+
+.vector-icon2 {
+    width: 20px;
+    height: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.inprofile .vector-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+}
+
+.inprofile .sinanhithmathgmailcom {
+    position: relative;
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.inprofile .vector-icon3 {
+    width: 6px;
+    height: 10.9px;
+    position: relative;
+    z-index: 1;
+}
+
+.inprofile .vector-wrapper1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6.5px 0 0;
+}
+
+.inprofile .frame-parent1,
+.inprofile .sinanhithmathgmailcom-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.inprofile .sinanhithmathgmailcom-parent {
+    flex: 1;
+    gap: 38px;
+}
+
+.inprofile .frame-parent1 {
+    align-self: stretch;
+    gap: 11px;
+}
+
+.inprofile .layer-2-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.inprofile .layer-2-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2px 0 0;
+}
+
+.inprofile .div {
+    position: relative;
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.inprofile .frame-parent3 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 7px;
+}
+
+.inprofile .vector-icon4 {
+    width: 6px;
+    height: 10.9px;
+    position: relative;
+    z-index: 1;
+}
+
+.inprofile .frame-parent2,
+.inprofile .vector-wrapper2 {
+    display: flex;
+    align-items: flex-start;
+}
+
+.inprofile .vector-wrapper2 {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 6.5px 0 0;
+}
+
+.inprofile .frame-parent2 {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.inprofile .bank-details,
+.inprofile .star-icon {
+    position: relative;
+    z-index: 2;
+}
+
+.inprofile .star-icon {
+    height: 24px;
+    width: 24px;
+    min-height: 24px;
+}
+
+.inprofile .bank-details {
+    font-weight: 500;
+    display: inline-block;
+    min-width: 99px;
+}
+
+.inprofile .star-icon-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 7px;
+}
+
+.inprofile .vector-icon5 {
+    width: 6px;
+    height: 10.9px;
+    position: relative;
+    z-index: 1;
+}
+
+.inprofile .frame-parent4,
+.inprofile .vector-wrapper3 {
+    display: flex;
+    align-items: flex-start;
+}
+
+.inprofile .vector-wrapper3 {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3.5px 0 0;
+}
+
+.inprofile .frame-parent4 {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.inprofile .frame-parent,
+.inprofile .frame-wrapper1,
+.inprofile .rectangle-group {
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.inprofile .rectangle-group {
+    flex: 1;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 15px 15px 20px;
+    gap: 22px;
+    flex-shrink: 0;
+
+}
+
+.inprofile .frame-parent,
+.inprofile .frame-wrapper1 {
+    align-self: stretch;
+    align-items: flex-start;
+}
+
+.inprofile .frame-wrapper1 {
+    flex-direction: row;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.inprofile .frame-parent {
+    height: 333px;
+    flex-direction: column;
+    padding: 176px 0 0;
+    gap: 17px;
+    flex-shrink: 0;
+
+    text-align: left;
+    font-size: 22px;
+    color: #111c30;
+    font-family: Poppins;
+}
+
+.inprofile .frame-icon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.inprofile .frame-wrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+}
+
+.inprofile .car,
+.inprofile .saving {
+    position: relative;
+    display: inline-block;
+}
+
+.inprofile .car {
+    width: 28px;
+    height: 22px;
+    line-height: 140%;
+    font-weight: 600;
+}
+
+.inprofile .saving {
+    align-self: stretch;
+    height: 20px;
+    font-size: 14px;
+    line-height: 145%;
+    color: #707070;
+}
+
+.inprofile .car-parent,
+.inprofile .frame-parent6 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.inprofile .car-parent {
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.inprofile .frame-parent6 {
+    width: 97px;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.inprofile .div1 {
+    align-self: stretch;
+    height: 22px;
+    position: relative;
+    line-height: 140%;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.inprofile .android-large-16-inner,
+.inprofile .frame-parent5,
+.inprofile .wrapper {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.inprofile .wrapper {
+    width: 65px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 12px 0 0;
+    color: #e25c5c;
+}
+
+.inprofile .android-large-16-inner,
+.inprofile .frame-parent5 {
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.inprofile .frame-parent5 {
+    flex: 1;
+    border-radius: 8px;
+    background-color: #fff;
+    justify-content: space-between;
+    padding: 12px;
+    flex-shrink: 0;
+
+    gap: 20px;
+}
+
+.inprofile .android-large-16-inner {
+    align-self: stretch;
+    justify-content: flex-end;
+    padding: 0 16px 0 17px;
+    text-align: left;
+    font-size: 16px;
+    color: #242424;
+    font-family: Inter;
+}
+
+.inprofile {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    background-color: #f6f7f9;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 0 467px;
+    box-sizing: border-box;
+    gap: 483px;
+    line-height: normal;
+    letter-spacing: normal;
+}

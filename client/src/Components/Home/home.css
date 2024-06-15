@@ -1,0 +1,1367 @@
+.home .frame-child {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0 !important;
+    top: -5px;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.home .available,
+.home .exports {
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    z-index: 1;
+}
+
+.home .exports {
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    min-width: 82px;
+}
+
+.home .available {
+    min-width: 68px;
+}
+
+.home .available-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 11px;
+    text-decoration: none;
+    color: #363636;
+}
+
+.home .onboarding-content-child {
+    width: 107px;
+    height: 4px;
+    position: relative;
+    border-top: 4px solid #31ba77;
+    box-sizing: border-box;
+}
+
+.home .onboarding-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 14px;
+    color: #111c30;
+    text-decoration: none;
+}
+
+.home .funded {
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 54px;
+    z-index: 1;
+}
+
+.home .funded-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 33px 0 0;
+    text-decoration: none;
+    color: #363636;
+}
+
+.home .exited {
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 43px;
+    z-index: 1;
+}
+
+.home .onboarding,
+.home .rectangle-parent {
+    display: flex;
+    align-items: flex-start;
+}
+
+.home .onboarding {
+    margin: 0;
+    width: 307px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(17, 28, 48, 0.8);
+    font-family: Poppins;
+}
+
+.home .rectangle-parent {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 38px 13px 0;
+    position: relative;
+    gap: 26px;
+}
+
+.home .frame-inner,
+.home .frame-item {
+    position: relative;
+    display: none;
+}
+
+.home .frame-item {
+    height: 79px;
+    width: 333px;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.home .frame-inner {
+    height: 47px;
+    width: 47px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    transform: rotate(90deg);
+}
+
+.home .progress-circle-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #31ba77;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.home .div {
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 21px;
+    z-index: 3;
+}
+
+.home .progress-circle {
+    height: 47px;
+    width: 47px;
+    position: relative;
+}
+
+.home .youre-halfway-there {
+    position: relative;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.home .verify-your-account {
+    position: relative;
+    font-size: 13px;
+    color: #6e6e6e;
+    z-index: 1;
+}
+
+.home .progress-caption,
+.home .youre-halfway-there-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.home .youre-halfway-there-parent {
+    justify-content: flex-start;
+    gap: 2px;
+}
+
+.home .progress-caption {
+    justify-content: flex-end;
+    padding: 0 0 1px;
+    font-size: 14px;
+    color: #111c30;
+}
+
+.home .rectangle-div,
+.home .rectangle-group {
+    align-self: stretch;
+    background-color: #fff;
+}
+
+.home .rectangle-group {
+    border-radius: 9px;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 14px 10px;
+    gap: 11px;
+    flex-shrink: 0;
+
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.home .rectangle-div {
+    height: 400px;
+    position: relative;
+    border-radius: 12px;
+    display: none;
+}
+
+.home .india-card-top-child,
+.home .rectangle-icon {
+    position: relative;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.home .rectangle-icon {
+    align-self: stretch;
+    border-radius: 12px 12px 0 0;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.home .india-card-top-child {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.home .india-card-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 3px 0 0;
+}
+
+.home .india {
+    position: relative;
+    display: inline-block;
+    min-width: 33px;
+    z-index: 1;
+    color: #111c30;
+}
+
+.home .india-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 4px 0 0;
+    color: #3f3f3f;
+}
+
+.home .vector-icon {
+    width: 4px;
+    height: 7.3px;
+    position: relative;
+    z-index: 1;
+}
+
+.home .vector-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 7px 4px 0 0;
+}
+
+.home .ellipse-icon,
+.home .uk {
+    position: relative;
+    z-index: 1;
+}
+
+.home .uk {
+    color: #363636;
+    text-align: right;
+    display: inline-block;
+    min-width: 16px;
+}
+
+.home .ellipse-icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.home .india-card-content-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 4px 0 0;
+}
+
+.home .line-div {
+    width: 1px;
+    height: 14px;
+    position: relative;
+    border-right: 1px solid #d3d3d3;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.home .india-card-content-child {
+    height: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px 3px 0 0;
+    box-sizing: border-box;
+}
+
+.home .vector-icon1 {
+    width: 10px;
+    height: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.home .vector-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5px 3px 0 0;
+}
+
+.home .div1 {
+    position: relative;
+    display: inline-block;
+    min-width: 43px;
+    z-index: 1;
+    color: #111c30;
+}
+
+.home .wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 4px 0 0;
+}
+
+.home .frame-child1 {
+    width: 1px;
+    height: 14px;
+    position: relative;
+    border-right: 1px solid #d3d3d3;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.home .frame-div {
+    height: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px 3px 0 0;
+    box-sizing: border-box;
+}
+
+.home .vector-icon2 {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+.home .foot-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+}
+
+.home .foot {
+    flex: 1;
+    position: relative;
+    display: inline-block;
+    min-width: 46px;
+    z-index: 1;
+    color: #111c30;
+}
+
+.home .india-card-content {
+    width: 275px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 1px 0 0;
+    box-sizing: border-box;
+    gap: 5px;
+}
+
+.home .cotton-tufted-bathmat {
+    flex: 1;
+    position: relative;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.home .product-name {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 1px;
+    text-align: left;
+    font-size: 16px;
+    color: #111c30;
+}
+
+.home .inr {
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 22px;
+    z-index: 1;
+}
+
+.home .investment-value {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8px 0 0;
+}
+
+.home .div2 {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 95px;
+    z-index: 1;
+}
+
+.home .investment-values {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.home .funded1 {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 74px;
+    z-index: 1;
+}
+
+.home .investment-funded {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5px 0 0;
+    color: #545454;
+}
+
+.home .investment-top,
+.home .investment-top-left {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.home .investment-top-left {
+    flex: 1;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.home .investment-top {
+    align-self: stretch;
+    justify-content: flex-end;
+    padding: 0 4px 0 0;
+}
+
+.home .investment-progress-child,
+.home .investment-progress-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+}
+
+.home .investment-progress-child {
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+}
+
+.home .investment-progress-item {
+    background-color: #31ba77;
+    height: 7px;
+    z-index: 2;
+}
+
+.home .investment-progress {
+    align-self: stretch;
+    height: 7px;
+    position: relative;
+    border-radius: 30px;
+    background-color: #d9d9d9;
+    z-index: 1;
+}
+
+.home .investment-details {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 0 4px;
+    gap: 7px;
+    color: #31ba77;
+}
+
+.home .investment-caption-content-child {
+    height: 64px;
+    width: 298px;
+    position: relative;
+    border-radius: 9px;
+    background-color: #f6f7f9;
+    display: none;
+}
+
+.home .expected-date-of {
+    margin-block-start: 0;
+    margin-block-end: 5px;
+}
+
+.home .return-on-investment {
+    margin: 0;
+}
+
+.home .expected-date-of-container {
+    position: relative;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.home .p {
+    margin-block-start: 0;
+    margin-block-end: 5px;
+}
+
+.home .p1 {
+    margin: 0;
+}
+
+.home .investment-caption-subheader-container {
+    position: relative;
+    font-weight: 600;
+    color: #111c30;
+    text-align: right;
+    z-index: 2;
+}
+
+.home .investment-caption-content {
+    flex: 1;
+    border-radius: 9px;
+    background-color: #f6f7f9;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 11px 9px;
+    gap: 34px;
+    z-index: 1;
+}
+
+.home .investment-caption {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 0 0 8px;
+    text-align: left;
+    color: #727272;
+}
+
+.home .india-card,
+.home .india-content,
+.home .investment-caption {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.home .india-card {
+    flex: 1;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.home .india-content {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 15px 0 8px;
+}
+
+.home .frame-child2,
+.home .rectangle-container {
+    align-self: stretch;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.home .rectangle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 18px;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.home .frame-child2 {
+    height: 400px;
+    position: relative;
+    display: none;
+    z-index: 0;
+}
+
+.home .frame-child3,
+.home .frame-child4 {
+    position: relative;
+    object-fit: cover;
+}
+
+.home .frame-child3 {
+    align-self: stretch;
+    border-radius: 12px 12px 0 0;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    z-index: 1;
+}
+
+.home .frame-child4 {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.home .ellipse-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 3px 0 0;
+}
+
+.home .india1 {
+    align-self: stretch;
+    height: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.home .india-wrapper {
+    width: 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 4px 0 0;
+    box-sizing: border-box;
+    color: #3f3f3f;
+}
+
+.home .vector-icon3 {
+    width: 4px;
+    height: 7.3px;
+    position: relative;
+}
+
+.home .vector-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 7px 4px 0 0;
+}
+
+.home .uk1 {
+    align-self: stretch;
+    width: 16px;
+    position: relative;
+    color: #363636;
+    text-align: right;
+    display: inline-block;
+}
+
+.home .frame-child5 {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.home .ellipse-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 4px 0 0;
+}
+
+.home .frame-child6 {
+    width: 1px;
+    height: 14px;
+    position: relative;
+    border-right: 1px solid #d3d3d3;
+    box-sizing: border-box;
+}
+
+.home .line-wrapper {
+    height: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px 3px 0 0;
+    box-sizing: border-box;
+}
+
+.home .vector-icon4 {
+    width: 10px;
+    height: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.home .vector-wrapper1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5px 3px 0 0;
+}
+
+.home .div3 {
+    align-self: stretch;
+    height: 20px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.home .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 4px 0 0;
+}
+
+.home .frame-child7 {
+    width: 1px;
+    height: 14px;
+    position: relative;
+    border-right: 1px solid #d3d3d3;
+    box-sizing: border-box;
+}
+
+.home .line-container {
+    height: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px 3px 0 0;
+    box-sizing: border-box;
+}
+
+.home .vector-icon5 {
+    width: 14px;
+    height: 14px;
+    position: relative;
+}
+
+.home .vector-wrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+}
+
+.home .foot1 {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+}
+
+.home .frame-container {
+    width: 275px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 1px 0 0;
+    box-sizing: border-box;
+    gap: 5px;
+}
+
+.home .cotton-tufted-bathmat1 {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.home .cotton-tufted-bathmat-60x90-wh-wrapper {
+    flex: 1;
+    flex-direction: row;
+    padding: 0 0 0 1px;
+    text-align: left;
+    font-size: 16px;
+    color: #111c30;
+}
+
+.home .cotton-tufted-bathmat-60x90-wh-wrapper,
+.home .frame-group,
+.home .frame-wrapper {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.home .frame-group {
+    flex: 1;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.home .frame-wrapper {
+    height: 90px;
+    flex-direction: row;
+    padding: 0 15px 7px 8px;
+    box-sizing: border-box;
+}
+
+.home .inr1 {
+    align-self: stretch;
+    height: 20px;
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    z-index: 1;
+}
+
+.home .inr-wrapper {
+    width: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8px 0 0;
+    box-sizing: border-box;
+}
+
+.home .div4 {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.home .investment-inr {
+    align-self: stretch;
+    width: 122px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.home .funded2 {
+    align-self: stretch;
+    height: 20px;
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    z-index: 1;
+}
+
+.home .investment-progress1 {
+    width: 74px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5px 0 0;
+    box-sizing: border-box;
+    color: #545454;
+}
+
+.home .investment-value1,
+.home .investment-values1 {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.home .investment-value1 {
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.home .investment-values1 {
+    justify-content: flex-end;
+    padding: 0 4px 0 0;
+}
+
+.home .investment-caption-child,
+.home .investment-caption-content1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+}
+
+.home .investment-caption-child {
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+}
+
+.home .investment-caption-content1 {
+    background-color: #31ba77;
+    width: 163px;
+    height: 7px;
+    z-index: 2;
+}
+
+.home .investment-caption1 {
+    align-self: stretch;
+    height: 7px;
+    position: relative;
+    border-radius: 30px;
+    background-color: #d9d9d9;
+    z-index: 1;
+}
+
+.home .investment-top-left1 {
+    align-self: stretch;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 7px;
+}
+
+.home .investment-caption-header-child {
+    height: 64px;
+    width: 298px;
+    position: relative;
+    border-radius: 9px;
+    background-color: #f6f7f9;
+    display: none;
+}
+
+.home .expected-date-of1 {
+    margin-block-start: 0;
+    margin-block-end: 5px;
+}
+
+.home .return-on-investment1 {
+    margin: 0;
+}
+
+.home .expected-date-of-container1 {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.home .p2 {
+    margin-block-start: 0;
+    margin-block-end: 5px;
+}
+
+.home .p3 {
+    margin: 0;
+}
+
+.home .div5 {
+    align-self: stretch;
+    width: 78px;
+    position: relative;
+    font-weight: 600;
+    color: #111c30;
+    text-align: right;
+    display: inline-block;
+    z-index: 2;
+}
+
+.home .investment-caption-header {
+    width: 298px;
+    flex: 1;
+    border-radius: 9px;
+    background-color: #f6f7f9;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 11px 9px;
+    box-sizing: border-box;
+    gap: 34px;
+    z-index: 1;
+    text-align: left;
+    color: #727272;
+}
+
+.home .investment-details1,
+.home .investment-top1 {
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.home .investment-top1 {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 19px;
+}
+
+.home .investment-details1 {
+    height: 127px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 15px 0 8px;
+    box-sizing: border-box;
+    color: #31ba77;
+}
+
+.home .group-icon {
+    width: 34px;
+    height: 8px;
+    position: absolute;
+    margin: 0 !important;
+    top: 131px;
+    left: 145px;
+    z-index: 3;
+}
+
+.home .group-div {
+    align-self: stretch;
+    border-radius: 12px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 18px;
+    position: relative;
+    gap: 8px;
+}
+
+.home .frame-parent,
+.home .india-banner,
+.home .progress {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.home .india-banner {
+    align-self: stretch;
+    height: 560px;
+    overflow-y: auto;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 4px 0 0;
+    gap: 21px;
+
+    cursor: pointer;
+    font-size: 13px;
+    color: #5d5d5d;
+}
+
+.home .frame-parent,
+.home .progress {
+    max-width: 100%;
+}
+
+.home .frame-parent {
+    height: 655px;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 0 576px;
+    gap: 16px;
+    text-align: center;
+    font-size: 12px;
+    color: #31ba77;
+    font-family: Poppins;
+}
+
+.home .progress {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 13px 0 14px;
+    margin-bottom: 100px;
+}
+
+.home .bottom-bar-content-child {
+    height: 61px;
+    width: 360px;
+    position: relative;
+    background-color: #fff;
+    display: none;
+    max-width: 100%;
+}
+
+.home .exports-icon {
+    height: 20px;
+    width: 16.9px;
+    position: relative;
+    z-index: 5;
+}
+
+.home .exports-icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 9.1px 0 11px;
+}
+
+.home .exports1 {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 37px;
+    z-index: 5;
+    color: #000000;
+}
+
+.home .exports-content,
+.home .exports-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.home .exports-content {
+    align-items: flex-end;
+    gap: 3px;
+    text-decoration: none;
+}
+
+.home .exports-content-wrapper {
+    align-items: flex-start;
+    padding: 1px 4px 0 0;
+    color: #111c30;
+}
+
+.home .wallet-icon {
+    height: 18px;
+    width: 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.home .wallet-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 6px;
+}
+
+.home .walletss {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 32px;
+    cursor: pointer;
+    z-index: 5;
+    color: #5d5d5d;
+}
+
+.home .wallet-content-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 7px 0 0;
+    gap: 4px;
+    text-decoration: none;
+}
+
+.home .portfolio-profile-icon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.home .portfolio-profile-icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 11px;
+}
+
+.home .portfolioss {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 42px;
+    cursor: pointer;
+    z-index: 5;
+    color: #5d5d5d;
+}
+
+.home .portfolio-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    text-decoration: none;
+    color: #5d5d5d;
+}
+
+.home .group-icon1 {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.home .group-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 5.1px 0 6px;
+}
+
+.home .profile {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 31px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.home .portfolio-profile1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 4px;
+    text-decoration: none;
+    color: #5d5d5d;
+}
+
+.home .android-large-10-child,
+.home .bottom-bar-content {
+    width: 100%;
+    position: fixed;
+    margin: 0 !important;
+    right: 0;
+    left: 0;
+}
+
+.home .bottom-bar-content {
+    bottom: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 12px 31px 10px 26px;
+    box-sizing: border-box;
+    max-width: 100%;
+    gap: 20px;
+    z-index: 4;
+    text-align: center;
+    font-size: 10px;
+    color: rgba(17, 28, 48, 0.6);
+    font-family: Poppins;
+}
+
+.home .android-large-10-child {
+    height: 100%;
+    bottom: -10px;
+    z-index: 6;
+}
+
+.home {
+    width: 100%;
+    position: relative;
+    background-color: #f6f7f9;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 9px;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    font-size: 22px;
+    color: #111c30;
+    font-family: Poppins;
+}
+
+@media screen and (max-width: 450px) {
+    .home .india-banner {
+        height: 560px;
+    }
+}

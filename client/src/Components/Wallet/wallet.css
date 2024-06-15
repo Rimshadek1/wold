@@ -1,0 +1,1329 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&display=swap");
+
+.wallet .frame-child {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0 !important;
+    top: -5px;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.wallet .my-wallet {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-block;
+    min-width: 107px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.wallet .rectangle-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 38px 20px 12px 24px;
+    position: relative;
+    flex-shrink: 0;
+    text-align: left;
+    font-size: 22px;
+    color: #111c30;
+    font-family: Poppins;
+
+}
+
+.wallet .total-balance {
+    position: relative;
+    line-height: 268%;
+    display: inline-block;
+    min-width: 89px;
+}
+
+.wallet .inr {
+    white-space: pre-wrap;
+}
+
+.wallet .span {
+    font-size: 32px;
+}
+
+.wallet .inr-25000 {
+    position: relative;
+    line-height: 125%;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    flex-shrink: 0;
+}
+
+.wallet .frame-wrapper,
+.wallet .total-balance-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.wallet .frame-wrapper {
+    justify-content: flex-end;
+    padding: 0 0 9.3px;
+}
+
+.wallet .frame-item {
+    height: 98.3px;
+    width: 100px;
+    position: relative;
+}
+
+.wallet .frame-inner,
+.wallet .frame-parent {
+    flex-shrink: 0;
+}
+
+.wallet .frame-parent {
+    margin-top: -103px;
+    margin-right: -18px;
+    width: 321px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 102%;
+    gap: 20px;
+}
+
+.wallet .frame-inner {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    border-radius: 50%;
+    background-color: #469b88;
+    margin-left: inherit;
+}
+
+.wallet .ellipse-wrapper {
+    margin-left: -253px;
+    height: 98px;
+    width: 91px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 7px 0 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.wallet .my-portfolio {
+    position: relative;
+    line-height: 150%;
+    display: inline-block;
+    min-width: 69px;
+}
+
+.wallet .my-portfolio-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 7px 0 0;
+}
+
+.wallet .arrow-right-icon {
+    height: 16px;
+    width: 16px;
+    position: relative;
+}
+
+.wallet .arrow-right-wrapper {
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.wallet .balance,
+.wallet .frame-container,
+.wallet .frame-group {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.wallet .frame-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+
+}
+
+.wallet .balance,
+.wallet .frame-group {
+    box-sizing: border-box;
+}
+
+.wallet .frame-group {
+    width: 337px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 0 0 231px;
+    gap: 162px;
+
+    max-width: 107%;
+    font-size: 12px;
+}
+
+.wallet .balance {
+    align-self: stretch;
+    height: 138px;
+    border-radius: 10px;
+    background-color: #242424;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 87px 6px 50px;
+    gap: 4.7px;
+    max-width: 100%;
+}
+
+.wallet .arrow-left-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    object-fit: contain;
+}
+
+.wallet .arrow-left-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 9px 0 0;
+}
+
+.wallet .income {
+    position: relative;
+    line-height: 150%;
+    display: inline-block;
+    min-width: 42px;
+}
+
+.wallet .span1 {
+    font-size: 18px;
+}
+
+.wallet .inr-20000 {
+    position: relative;
+    line-height: 135%;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+    min-width: 90px;
+    font-size: 13px;
+}
+
+.wallet .frame-parent1,
+.wallet .income-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.wallet .frame-parent1 {
+    flex-direction: row;
+    gap: 12px;
+}
+
+.wallet .line-div {
+    height: 43px;
+    width: 1px;
+    position: relative;
+    border-right: 1px solid #cfcfcf;
+    box-sizing: border-box;
+}
+
+.wallet .arrow-left-icon1 {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    object-fit: contain;
+}
+
+.wallet .arrow-left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 9px 0 0;
+}
+
+.wallet .div,
+.wallet .no-of-trades {
+    position: relative;
+    line-height: 150%;
+    display: inline-block;
+    min-width: 71px;
+}
+
+.wallet .div {
+    font-size: 18px;
+    line-height: 135%;
+    font-weight: 600;
+    color: #fff;
+    min-width: 12px;
+}
+
+.wallet .frame-parent2,
+.wallet .no-of-trades-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.wallet .frame-parent2 {
+    flex-direction: row;
+    gap: 12px;
+}
+
+.wallet .group-iconss {
+    height: 80.2px;
+    width: 460px;
+    position: absolute;
+    margin: 0 !important;
+    right: 250px;
+    bottom: -9.2px;
+    z-index: 1;
+}
+
+.wallet .group-icons {
+    height: 80.2px;
+    width: 340px;
+    position: absolute;
+    margin: 0 !important;
+    left: 230px;
+    bottom: -39.2px;
+    z-index: 1;
+}
+
+.wallet .frame-div,
+.wallet .stat {
+    border-radius: 9px;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.wallet .frame-div {
+    flex: 1;
+    background-color: #242424;
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 24px;
+    box-sizing: border-box;
+    position: relative;
+    gap: 22.5px;
+    max-width: 100%;
+}
+
+.wallet .stat {
+    align-self: stretch;
+    overflow: hidden;
+    font-size: 12px;
+    color: #f3f3f3;
+}
+
+.wallet .android-large-11-inner,
+.wallet .balance-parent,
+.wallet .stat {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.wallet .balance-parent {
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.wallet .android-large-11-inner {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 17px 5px 16px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    text-align: left;
+    font-size: 14px;
+    color: #fff;
+    font-family: Inter;
+}
+
+.wallet .ellipse-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #f6f7fb;
+    border: 0 solid #bcbcbc;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.wallet .vector-icon {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 16px;
+    height: 16px;
+    z-index: 3;
+}
+
+.wallet .frame-child1,
+.wallet .vector-icon1 {
+    position: absolute;
+    margin: 0 !important;
+}
+
+.wallet .frame-child1 {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #f6f7fb;
+    border: 0 solid #bcbcbc;
+    box-sizing: border-box;
+}
+
+.wallet .vector-icon1 {
+    height: 16px;
+    width: 16px;
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    z-index: 1;
+}
+
+.wallet .frame-child2 {
+    height: 48px;
+    width: 48px;
+    position: relative;
+    z-index: 4;
+}
+
+.wallet .ellipse-group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.wallet .ellipse-group,
+.wallet .vector-parent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wallet .ellipse-parent {
+    height: 48px;
+    width: 48px;
+    position: relative;
+}
+
+.wallet .frame-wrapper1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.wallet .deposit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wallet .deposit,
+.wallet .deposit1,
+.wallet .deposit2 {
+    line-height: 150%;
+    display: inline-block;
+    min-width: 44px;
+}
+
+.wallet .deposit1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.wallet .deposit2 {
+    z-index: 2;
+}
+
+.wallet .deposit-group,
+.wallet .deposit2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wallet .deposit-parent {
+    height: 18px;
+    flex: 1;
+    position: relative;
+}
+
+.wallet .frame-parent4,
+.wallet .frame-wrapper2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.wallet .frame-wrapper2 {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 2px;
+}
+
+.wallet .frame-parent4 {
+    width: 48px;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.wallet .arrow-right-icon1 {
+    height: 31.1px;
+    width: 31.1px;
+    position: absolute;
+    margin: 0 !important;
+    top: calc(50% - 15.55px);
+    left: 18.3px;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.wallet .frame-child3,
+.wallet .frame-child4 {
+    position: absolute;
+    top: 33.34px;
+    left: 0;
+    border-radius: 50%;
+    background-color: #f6f7fb;
+    border: 0 solid #bcbcbc;
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    transform: rotate(-44deg);
+    transform-origin: 0 0;
+}
+
+.wallet .frame-child4 {
+    z-index: 2;
+}
+
+.wallet .ellipse-container {
+    height: 67.9px;
+    flex: 1;
+    position: relative;
+}
+
+.wallet .arrow-right-icon2,
+.wallet .frame-child5 {
+    position: absolute;
+    margin: 0 !important;
+}
+
+.wallet .arrow-right-icon2 {
+    height: 31.1px;
+    width: 31.1px;
+    top: calc(50% - 15.55px);
+    left: 18.3px;
+    object-fit: contain;
+    z-index: 3;
+}
+
+.wallet .frame-child5 {
+    height: 100%;
+    width: 91%;
+    top: 8px;
+    right: 0;
+    bottom: 0;
+    left: 7px;
+    max-width: 79%;
+    overflow: hidden;
+    max-height: 75%;
+    z-index: 1;
+}
+
+.wallet .arrow-right-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.wallet .withdraw,
+.wallet .withdraw1,
+.wallet .withdraw2 {
+    position: relative;
+    line-height: 150%;
+    display: inline-block;
+    min-width: 53.6px;
+}
+
+.wallet .withdraw1,
+.wallet .withdraw2 {
+    flex-shrink: 0;
+
+    z-index: 3;
+}
+
+.wallet .withdraw2 {
+    cursor: pointer;
+    z-index: 5;
+    margin-left: -53.6px;
+}
+
+.wallet .withdraw-group {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: -53.6px;
+}
+
+.wallet .withdraw-group,
+.wallet .withdraw-parent {
+    flex-direction: row;
+}
+
+.wallet .frame-parent5,
+.wallet .frame-wrapper3,
+.wallet .withdraw-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.wallet .frame-wrapper3 {
+    flex-direction: row;
+    padding: 0 9px 0 4.9px;
+    margin-top: -2px;
+}
+
+.wallet .frame-parent5 {
+    width: 67.9px;
+    flex-direction: column;
+}
+
+.wallet .frame-parent3 {
+    width: 160px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.wallet .android-large-11-child {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 20px 10.1px 30px;
+    flex-shrink: 0;
+    text-align: left;
+    font-size: 12px;
+    color: #3d3d3d;
+    font-family: Inter;
+}
+
+.wallet .transactions {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    line-height: 130%;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+.wallet .filter-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1px 0 0;
+}
+
+.wallet .android-large-11-inner1,
+.wallet .transactions-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.wallet .transactions-parent {
+    flex: 1;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.wallet .android-large-11-inner1 {
+    align-self: stretch;
+    justify-content: flex-end;
+    padding: 0 16px 0 17px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.wallet .frame-icon {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.wallet .div1,
+.wallet .purchased {
+    position: relative;
+    line-height: 140%;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 83px;
+    flex-shrink: 0;
+
+}
+
+.wallet .div1 {
+    min-width: 65px;
+}
+
+.wallet .pm,
+.wallet .wrapper {
+    margin-top: -9px;
+}
+
+.wallet .wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    color: #e25c5c;
+}
+
+.wallet .pm {
+    position: relative;
+    font-size: 12px;
+    line-height: 145%;
+    color: #707070;
+    white-space: pre-wrap;
+    flex-shrink: 0;
+
+}
+
+.wallet .frame-parent7,
+.wallet .purchased-parent {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.wallet .purchased-parent {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.wallet .frame-parent7 {
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #fff;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 12px 8px 15px 12px;
+    gap: 12px;
+}
+
+.wallet .frame-child6 {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.wallet .div2,
+.wallet .purchased1 {
+    position: relative;
+    line-height: 140%;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 83px;
+    flex-shrink: 0;
+
+}
+
+.wallet .div2 {
+    min-width: 72px;
+}
+
+.wallet .container {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-top: -9px;
+    text-align: right;
+    color: #e25c5c;
+}
+
+.wallet .pm1 {
+    position: relative;
+    font-size: 12px;
+    line-height: 145%;
+    color: #707070;
+    white-space: pre-wrap;
+    flex-shrink: 0;
+
+    margin-top: -9px;
+}
+
+.wallet .frame-parent8,
+.wallet .purchased-group {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.wallet .purchased-group {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.wallet .frame-parent8 {
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #fff;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 12px 10px 15px 12px;
+    gap: 12px;
+}
+
+.wallet .import-icon {
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.wallet .frame-wrapper4,
+.wallet .import-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.wallet .import-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba(64, 59, 215, 0.2);
+    flex-direction: row;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.wallet .frame-wrapper4 {
+    flex-direction: column;
+    padding: 1px 0 0;
+}
+
+.wallet .deposit3,
+.wallet .pm2 {
+    position: relative;
+}
+
+.wallet .deposit3 {
+    line-height: 140%;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 60px;
+}
+
+.wallet .pm2 {
+    font-size: 12px;
+    line-height: 145%;
+    color: #707070;
+    white-space: pre-wrap;
+    flex-shrink: 0;
+}
+
+.wallet .deposit-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 20px 0 0;
+    gap: 4px;
+}
+
+.wallet .div3 {
+    position: relative;
+    line-height: 140%;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 78px;
+}
+
+.wallet .frame,
+.wallet .frame-parent9 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.wallet .frame {
+    flex-direction: column;
+    padding: 12px 0 0;
+    text-align: right;
+    color: #31ba77;
+}
+
+.wallet .frame-parent9 {
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #fff;
+    flex-direction: row;
+    padding: 12px 8px 15px 14px;
+    gap: 10px;
+}
+
+.wallet .frame-parent6,
+.wallet .frame-section {
+    display: flex;
+    max-width: 100%;
+    align-self: stretch;
+    margin-bottom: 40px;
+
+}
+
+.wallet .frame-parent6 {
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.wallet .frame-section {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 16px 0 17px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    text-align: left;
+    font-size: 16px;
+    color: #242424;
+    font-family: Inter;
+}
+
+.wallet .rectangle-div {
+    height: 61px;
+    width: 360px;
+    position: relative;
+    background-color: #fff;
+    display: none;
+    max-width: 100%;
+}
+
+.wallet .vector-icon2 {
+    height: 20px;
+    width: 16.9px;
+    position: relative;
+    z-index: 2;
+}
+
+.wallet .vector-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 9.1px 0 11px;
+}
+
+.wallet .exports {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 37px;
+    cursor: pointer;
+    z-index: 2;
+    color: #5d5d5d;
+}
+
+.wallet .frame-parent11 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 3px;
+    text-decoration: none;
+}
+
+.wallet .vector-icon3 {
+    height: 18px;
+    width: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.wallet .vector-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 5.1px 0 7px;
+}
+
+.wallet .wallets {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 32px;
+    z-index: 2;
+    color: #000000;
+}
+
+.wallet .frame-parent12 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.wallet .vector-icon4 {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.wallet .vector-frame {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 10.1px 0 12px;
+}
+
+.wallet .portfolioss {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 42px;
+    z-index: 2;
+    color: #5d5d5d;
+}
+
+.wallet .frame-parent13 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 3px;
+    text-decoration: none;
+}
+
+.wallet .group-icon1 {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.wallet .group-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 5.1px 0 6px;
+}
+
+.wallet .profile {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 31px;
+    z-index: 2;
+    color: #5d5d5d;
+}
+
+.wallet .frame-parent14,
+.wallet .rectangle-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 4px;
+    text-decoration: none;
+}
+
+.wallet .rectangle-group {
+    flex: 1;
+    background-color: #fff;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 31px 10px 26px;
+    box-sizing: border-box;
+    max-width: 105%;
+    flex-shrink: 0;
+    gap: 20px;
+    z-index: 1;
+}
+
+.wallet .frame-child7 {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.wallet .frame-wrapper5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+}
+
+.wallet .paypal,
+.wallet .salary {
+    position: relative;
+    display: inline-block;
+}
+
+.wallet .paypal {
+    line-height: 140%;
+    font-weight: 600;
+    min-width: 52px;
+}
+
+.wallet .salary {
+    font-size: 14px;
+    line-height: 145%;
+    color: #707070;
+    min-width: 42px;
+}
+
+.wallet .frame-parent16,
+.wallet .paypal-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+.wallet .frame-parent16 {
+    flex-direction: row;
+    gap: 12px;
+}
+
+.wallet .div4 {
+    position: relative;
+    line-height: 140%;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 64px;
+}
+
+.wallet .wrapper1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 0 0;
+    color: #e25c5c;
+}
+
+.wallet .frame-parent10,
+.wallet .frame-parent15 {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: sticky;
+}
+
+.wallet .frame-parent15 {
+    margin-bottom: -4px;
+    width: 327px;
+    border-radius: 8px;
+    background-color: #fff;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 12px;
+    max-width: calc(100% - 17px);
+    gap: 20px;
+    margin-left: -343px;
+    text-align: left;
+    font-size: 16px;
+    color: #242424;
+    font-family: Inter;
+}
+
+.wallet .frame-parent10 {
+    align-self: stretch;
+    height: 66px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 16px 0 0;
+    max-width: 100%;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 10px;
+    color: #111c30;
+    bottom: 0;
+}
+
+.wallet .frame-parent10,
+.wallet .rectangle-group {
+    width: 100%;
+    position: fixed;
+    margin: 0 !important;
+    right: 0;
+    left: 0;
+    z-index: 6;
+}
+
+.wallet .frame-child8 {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.wallet .frame-wrapper6 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+}
+
+
+
+
+.wallet .div5 {
+    align-self: stretch;
+    height: 22px;
+    position: relative;
+    line-height: 140%;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.wallet .android-large-11-inner2,
+.wallet .frame-footer,
+.wallet .wrapper2 {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.wallet .wrapper2 {
+    width: 65px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 12px 0 0;
+    color: #e25c5c;
+}
+
+.wallet .android-large-11-inner2,
+.wallet .frame-footer {
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.wallet .frame-footer {
+    flex: 1;
+    border-radius: 8px;
+    background-color: #fff;
+    justify-content: space-between;
+    padding: 12px;
+    gap: 20px;
+    text-align: left;
+    font-size: 16px;
+    color: #242424;
+    font-family: Inter;
+}
+
+.wallet .android-large-11-inner2 {
+    align-self: stretch;
+    justify-content: flex-end;
+    padding: 0 16px 0 17px;
+    flex-shrink: 0;
+}
+
+.wallet {
+    width: 100%;
+    position: relative;
+    background-color: #f6f7f9;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 15px;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 20px;
+    color: #242424;
+    font-family: Poppins;
+}

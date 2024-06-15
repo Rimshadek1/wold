@@ -1,0 +1,847 @@
+.ownerdash .android-large-26-child {
+    width: 47px;
+    height: 47px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    transform: rotate(90deg);
+    display: none;
+}
+
+.ownerdash .verify-left-icon,
+.ownerdash .verify-mid-icon {
+    position: absolute;
+    top: 1.3px;
+    left: 0;
+    width: 22.9px;
+    height: 19.3px;
+}
+
+.ownerdash .verify-mid-icon {
+    top: 0.1px;
+    left: 41.1px;
+    width: 15.2px;
+    height: 20.8px;
+}
+
+.ownerdash .verify-second-mid-icon {
+    position: absolute;
+    top: 5.8px;
+    left: 20.7px;
+    width: 15px;
+    height: 15px;
+    z-index: 1;
+}
+
+.ownerdash .owner-left-icon,
+.ownerdash .verify-right-icon {
+    position: absolute;
+    top: 0;
+    left: 36.4px;
+    width: 4px;
+    height: 20.6px;
+}
+
+.ownerdash .owner-left-icon {
+    top: 16.4px;
+    left: 57.6px;
+    width: 4.6px;
+    height: 4.6px;
+}
+
+.ownerdash .owner-right-icon {
+    position: absolute;
+    top: 22.3px;
+    left: 33.4px;
+    width: 0.3px;
+    height: 0.3px;
+}
+
+.ownerdash .verify-left-icon-parent {
+    align-self: stretch;
+    height: 22.6px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.ownerdash .frame-container {
+    width: 62.2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2.6px 0 0;
+    box-sizing: border-box;
+}
+
+.ownerdash .owners {
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    color: inherit;
+    display: inline-block;
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+.ownerdash .frame-group,
+.ownerdash .frame-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.ownerdash .frame-wrapper {
+    padding: 0 14px;
+}
+
+.ownerdash .frame-child {
+    height: 79px;
+    width: 333px;
+    position: relative;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+}
+
+.ownerdash .invest-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #31ba77;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.ownerdash .invest-title {
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 21px;
+    z-index: 3;
+}
+
+.ownerdash .invest-image-parent {
+    height: 47px;
+    width: 47px;
+    position: relative;
+}
+
+.ownerdash .verify-to-be,
+.ownerdash .verify-your-account {
+    position: relative;
+    white-space: nowrap;
+}
+
+.ownerdash .verify-to-be {
+    font-weight: 600;
+    z-index: 1;
+}
+
+.ownerdash .verify-your-account {
+    font-size: 13px;
+    color: #6e6e6e;
+    text-align: center;
+    z-index: 2;
+}
+
+.ownerdash .verify-content,
+.ownerdash .verify-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.ownerdash .verify-content-wrapper {
+    width: 229px;
+    justify-content: flex-end;
+    padding: 0 0 3px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 14px;
+    color: #111c30;
+}
+
+.ownerdash .verify-button-icon {
+    width: 6px;
+    height: 10.9px;
+    position: relative;
+    z-index: 1;
+}
+
+.ownerdash .verify-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 17.1px;
+}
+
+.ownerdash .rectangle-parent {
+    align-self: stretch;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 14px 10px;
+    gap: 11px;
+    top: 0;
+    z-index: 99;
+    position: sticky;
+    max-width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #31ba77;
+    font-family: Poppins;
+}
+
+.ownerdash .frame-item {
+    width: 332px;
+    height: 166px;
+    position: relative;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 21px;
+    background-color: #31ba77;
+    display: none;
+    max-width: 100%;
+}
+
+.ownerdash .wold-content-child,
+.ownerdash .wold-exporting-platform {
+    position: relative;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.ownerdash .wold-content-child {
+    width: 62.2px;
+    height: 22.6px;
+}
+
+.ownerdash .wold-exporting-platform {
+    font-weight: 300;
+    display: inline-block;
+    min-width: 120px;
+}
+
+.ownerdash .wold-exporting-platform-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 2px;
+    margin-top: -0.6px;
+}
+
+.ownerdash .wold-content,
+.ownerdash .wold-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.ownerdash .wold-content-wrapper {
+    padding: 7px 0 0;
+}
+
+.ownerdash .value-icon {
+    width: 10px;
+    height: 13.8px;
+    position: relative;
+    z-index: 1;
+}
+
+.ownerdash .value-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8px 0 0;
+}
+
+.ownerdash .b {
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 44px;
+    z-index: 1;
+}
+
+.ownerdash .value-content-parent {
+    justify-content: flex-start;
+    gap: 5px;
+    font-size: 20px;
+}
+
+.ownerdash .frame-parent1,
+.ownerdash .platform-left,
+.ownerdash .value-content-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.ownerdash .frame-parent1 {
+    flex: 1;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.ownerdash .platform-left {
+    align-self: stretch;
+    justify-content: flex-end;
+    padding: 0 1px 0 0;
+}
+
+.ownerdash .value {
+    position: relative;
+    font-weight: 200;
+    display: inline-block;
+    min-width: 37px;
+    z-index: 1;
+}
+
+.ownerdash .value-description-icon {
+    width: 16px;
+    height: 22.1px;
+    position: relative;
+    z-index: 1;
+}
+
+.ownerdash .value-description-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 13px 0 0;
+}
+
+.ownerdash .b1 {
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 21px;
+    z-index: 1;
+}
+
+.ownerdash .value-description-content-parent,
+.ownerdash .value-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.ownerdash .value-description-content-parent {
+    justify-content: flex-start;
+    gap: 7px;
+    font-size: 32px;
+}
+
+.ownerdash .value-parent {
+    align-self: stretch;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 13px;
+}
+
+.ownerdash .rectangle-group {
+    flex: 1;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 21px;
+    background-color: #31ba77;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 16px 22px 15px;
+    gap: 43px;
+}
+
+.ownerdash .frame-inner,
+.ownerdash .frame-wrapper1,
+.ownerdash .rectangle-group {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.ownerdash .frame-wrapper1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 1px;
+}
+
+.ownerdash .frame-inner {
+    height: 57px;
+    width: 330px;
+    position: relative;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    display: none;
+    z-index: 1;
+}
+
+.ownerdash .wold-owner-left-child {
+    height: 30px;
+    width: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.ownerdash .woldowner-pitch {
+    align-self: stretch;
+    position: relative;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.ownerdash .wold-owner-left,
+.ownerdash .woldowner-pitch-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.ownerdash .woldowner-pitch-wrapper {
+    flex-direction: column;
+    padding: 9px 0 0;
+}
+
+.ownerdash .wold-owner-left {
+    flex-direction: row;
+    gap: 15px;
+}
+
+.ownerdash .pdf {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 28px;
+    z-index: 1;
+}
+
+.ownerdash .p-d-f-icon {
+    width: 6px;
+    height: 10.9px;
+    position: relative;
+    z-index: 2;
+}
+
+.ownerdash .p-d-f-icon-wrapper,
+.ownerdash .pdf-parent {
+    display: flex;
+    align-items: flex-start;
+}
+
+.ownerdash .p-d-f-icon-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 7px 0 0;
+}
+
+.ownerdash .pdf-parent {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.ownerdash .rectangle-container,
+.ownerdash .wold-owner-right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.ownerdash .wold-owner-right {
+    width: 55px;
+    flex-direction: column;
+    padding: 3px 0 0;
+    box-sizing: border-box;
+    margin-left: -13px;
+    font-size: 15px;
+    color: #747474;
+}
+
+.ownerdash .rectangle-container {
+    flex: 1;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    flex-direction: row;
+    padding: 11px 12px 12px 19px;
+}
+
+.ownerdash .frame-wrapper2,
+.ownerdash .rectangle-container,
+.ownerdash .rectangle-div {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.ownerdash .frame-wrapper2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 1px 0 0;
+    color: #000;
+}
+
+.ownerdash .rectangle-div {
+    height: 57px;
+    width: 330px;
+    position: relative;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    display: none;
+}
+
+.ownerdash .compare-investment {
+    position: relative;
+    font-weight: 600;
+    z-index: 1;
+    color: #020202;
+}
+
+.ownerdash .whatsapp-icon {
+    width: 6px;
+    height: 10.9px;
+    position: relative;
+    z-index: 1;
+}
+
+.ownerdash .whatsapp-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6px 0 0;
+}
+
+.ownerdash .frame-child1,
+.ownerdash .group-div {
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.ownerdash .group-div {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 16px 15px;
+    gap: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.ownerdash .frame-child1 {
+    height: 57px;
+    width: 330px;
+    position: relative;
+    display: none;
+    z-index: 0;
+}
+
+.ownerdash .compare-icon {
+    width: 19.9px;
+    height: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.ownerdash .compare-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1px 0 0;
+}
+
+.ownerdash .whatsapp-us {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 108px;
+    z-index: 1;
+}
+
+.ownerdash .button-divider-icon {
+    height: 10.9px;
+    width: 6px;
+    position: absolute;
+    margin: 0 !important;
+    top: 23px;
+    right: 14px;
+    z-index: 1;
+}
+
+.ownerdash .rectangle-parent1 {
+    align-self: stretch;
+    border-radius: 9px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px 18px 14px;
+    position: relative;
+    gap: 11.1px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #111c30;
+}
+
+.ownerdash .frame-div,
+.ownerdash .frame-parent2,
+.ownerdash .frame-section,
+.ownerdash .rectangle-parent1 {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.ownerdash .frame-parent2 {
+    align-self: stretch;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 2px 0 0;
+    box-sizing: border-box;
+    gap: 14px;
+    font-size: 11px;
+    color: #111c30;
+}
+
+.ownerdash .frame-div,
+.ownerdash .frame-section {
+    align-items: flex-start;
+}
+
+.ownerdash .frame-div {
+    flex: 1;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.ownerdash .frame-section {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 0 0 2px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 10px;
+    color: #fff;
+    font-family: Poppins;
+}
+
+.ownerdash .vector-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin: 0 !important;
+    bottom: 0;
+    left: 19px;
+}
+
+.ownerdash .frame-child2,
+.ownerdash .frame-parent {
+    position: relative;
+    max-width: 100%;
+}
+
+.ownerdash .frame-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 68px;
+    box-sizing: border-box;
+    gap: 20px;
+    text-align: left;
+    font-size: 20.9px;
+    color: #020202;
+    font-family: Poppins;
+}
+
+.ownerdash .frame-child2 {
+    height: 46px;
+    width: 324px;
+    border-radius: 9px;
+    background-color: #31ba77;
+    display: none;
+}
+
+.ownerdash .invest {
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Poppins;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    min-width: 47px;
+    z-index: 1;
+}
+
+.ownerdash .group-button {
+    cursor: pointer;
+    border: 0;
+    padding: 11px 20px 12px 21px;
+    background-color: #31ba77;
+    align-self: stretch;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.ownerdash .option-image-icon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.ownerdash .option-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+}
+
+
+.ownerdash .option-labels,
+.ownerdash .options-grid {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.ownerdash .option-labels {
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ownerdash .options-grid {
+    width: 97px;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.ownerdash .b2 {
+    align-self: stretch;
+    height: 22px;
+    position: relative;
+    line-height: 140%;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.ownerdash .options-description {
+    width: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 0 0;
+    box-sizing: border-box;
+    color: #e25c5c;
+}
+
+.ownerdash .invest-options,
+.ownerdash .options-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.ownerdash .options-content {
+    flex: 1;
+    justify-content: space-between;
+    flex-shrink: 0;
+    gap: 20px;
+}
+
+.ownerdash .invest-options {
+    align-self: stretch;
+    justify-content: flex-end;
+    padding: 0 10px 0 11px;
+}
+
+.ownerdash .invest-options-content {
+    height: 60px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 0 14px;
+    box-sizing: border-box;
+    gap: 42px;
+    max-width: 100%;
+}
+
+.ownerdash .invest-options-content-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 5px 0 6px;
+    box-sizing: border-box;
+    max-width: 100%;
+    text-align: left;
+    font-size: 16px;
+    color: #242424;
+    font-family: Inter;
+}
+
+.ownerdash {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 34px 13px 0 12px;
+    box-sizing: border-box;
+    gap: 102px;
+    line-height: normal;
+    letter-spacing: normal;
+}

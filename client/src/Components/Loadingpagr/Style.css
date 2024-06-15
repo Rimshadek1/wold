@@ -1,0 +1,72 @@
+.loading {
+    background-color: #31ba77;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.loading .div {
+    background-color: #31ba77;
+    height: 800px;
+    position: relative;
+    width: 360px;
+}
+
+.loading .overlap {
+    height: 30px;
+    left: 137px;
+    position: absolute;
+    top: 382px;
+    width: 55px;
+}
+
+.loading .vector {
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 35px;
+}
+
+.loading .img {
+    height: 23px;
+    left: 32px;
+    position: absolute;
+    top: 7px;
+    width: 23px;
+}
+
+.loading .vector-2 {
+    height: 32px;
+    left: 200px;
+    position: absolute;
+    top: 380px;
+    width: 23px;
+}
+
+.loading .vector-3 {
+    height: 31px;
+    left: 193px;
+    position: absolute;
+    top: 380px;
+    width: 6px;
+}
+
+.loading .overlap-group {
+    /* background-image: url(./vector-4.svg);
+    background-size: 100% 100%; */
+    height: 7px;
+    left: 176px;
+    position: absolute;
+    top: 414px;
+    width: 7px;
+}
+
+.loading .vector-4 {
+    width: 7px;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    height: 7px;
+}

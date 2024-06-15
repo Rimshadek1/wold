@@ -1,0 +1,79 @@
+/* Container for the entire dashboard */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 120%;
+}
+
+/* Container for the buttons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Styling for the "Add Trade" button */
+.add-trade-button {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Styling for the "View Trade" button */
+.view-trade-button {
+    background-color: #3f51b5;
+    /* Blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.veri-adhar-button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Basic table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    text-align: left;
+    background-color: #f2f2f2;
+}
+
+/* Optional styling for action buttons within the table */
+.action-button {
+    background-color: #cccccc;
+    /* Light gray */
+    color: black;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 5px;
+    cursor: pointer;
+}
