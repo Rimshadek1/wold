@@ -29,8 +29,8 @@ app.use('/', indexRouter);
 
 db.connect()
     .then(() => {
-        app.listen(80, () => {
-            console.log(`Server started at Port No: ${80}`);
+        app.listen(3001, () => {
+            console.log(`Server started at Port No: ${3001}`);
         });
     })
     .catch(err => {
