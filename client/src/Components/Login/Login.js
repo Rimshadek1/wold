@@ -7,7 +7,7 @@ function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
-
+    const [loading, setLoading] = useState(false);
 
     const login = async (e) => {
         e.preventDefault();
@@ -21,7 +21,7 @@ function Login() {
                 password: password
             };
             try {
-
+                setLoading(true);
                 const response = await loginUsers(data);
                 localStorage.setItem('authToken', response.data.token);
                 if (response.data.role === "admin") {
@@ -37,7 +37,7 @@ function Login() {
                 } else {
                     toast.error("Login failed. Please try again.");
                 }
-
+                setLoading(false);
             }
         }
     };
@@ -78,7 +78,7 @@ function Login() {
             <div className="frame-div">
                 <button className="rectangle-parent" onClick={login}>
                     <div className="frame-inner" />
-                    <div className="login2">Login</div>
+                    <div className="login2">{loading ? 'Loading...' : 'Login'}</div>
                 </button>
             </div>
             <div className="forget-password-wrapper">
