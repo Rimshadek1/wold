@@ -1,20 +1,4 @@
-// import axios from "axios";
 
-// export const commonrequest = async (method, url, data, headers) => {
-//     try {
-//         const config = {
-//             method: method,
-//             url: url,
-//             data: data,
-//             headers: headers || { "Content-Type": "multipart/form-data" },
-//         };
-
-//         const response = await axios(config);
-//         return response;
-//     } catch (error) {
-//         throw error;
-//     }
-// };
 import axios from "axios";
 
 export const commonrequest = async (method, url, data, headers) => {

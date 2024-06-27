@@ -152,6 +152,7 @@
     display: inline-block;
     min-width: 21px;
     z-index: 3;
+    color: #fff;
 }
 
 .home .progress-circle {
@@ -209,7 +210,7 @@
     padding: 14px 10px;
     gap: 11px;
     flex-shrink: 0;
-
+    text-decoration: none;
     max-width: 100%;
     cursor: pointer;
 }

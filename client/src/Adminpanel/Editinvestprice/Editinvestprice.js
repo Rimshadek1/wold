@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router';
 import { pupdate10, viewpupdate10 } from '../../Service/Apis';
+import { UserContext } from '../../UserContext/userContext';
 
 function Editinvestprice() {
     const [p10, setP10] = useState('');
@@ -47,6 +48,9 @@ function Editinvestprice() {
             alert('Failed to update trade profit');
         }
     };
+    const { userData } = useContext(UserContext);
+
+    if (userData.role !== "admin") { return (<>You are not admin </>) }
 
     return (
         <div className="addtrade-container">

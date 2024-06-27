@@ -36,6 +36,9 @@ function InvestCode() {
     const goBack = () => {
         navigate(-1);
     }
+    if (userData.role !== "verified" && userData.role !== "verifying" && userData.role !== "unverified") {
+        return (<>Please login</>);
+    }
     return (
         <div className="investcode">
             <img className="vector-icon" loading="lazy" alt="" src="/Investcode/vector.svg" />

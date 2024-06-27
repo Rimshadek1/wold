@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router';
 import { tradeProfit, viewTradeProfit } from '../../Service/Apis';
+import { UserContext } from '../../UserContext/userContext';
 
 function Addprofit() {
     const { id } = useParams();
@@ -44,15 +45,16 @@ function Addprofit() {
             alert('Failed to update trade profit');
         }
     };
+    const { userData } = useContext(UserContext);
 
+    if (userData.role !== "admin") { return (<>You are not admin </>) }
     return (
         <div className="addtrade-container">
-            <h2>Add Trade</h2>
+            <h2>Add Profit</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="nameOfTrade">Name of Trade:</label>
                     <input
-                        type="text"
+                        type="number"
                         id="nameOfTrade"
                         name="nameOfTrade"
                         placeholder={existingTradeProfit ? `You set your profit as ${existingTradeProfit}` : 'Set your profit'}

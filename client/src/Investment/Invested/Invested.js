@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './invested.css'
 import { useNavigate } from 'react-router'
+import { UserContext } from '../../UserContext/userContext';
 function Invested() {
     const navigate = useNavigate();
+    const { userData } = useContext(UserContext);
+
     const goBack = () => {
         navigate("/ownerdash")
+    };
+    if (userData.role !== "verified" && userData.role !== "verifying" && userData.role !== "unverified") {
+        return (<>Please login</>);
     }
     return (
         <div className="result">

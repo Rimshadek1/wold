@@ -38,6 +38,7 @@ import Invested from "./Investment/Invested/Invested";
 import Investcodes from "./Adminpanel/Investcodes/Investcodes";
 import Editinvestprice from "./Adminpanel/Editinvestprice/Editinvestprice";
 import WithdrawRequets from "./Adminpanel/WIthdrawRequest/WithdrawRequets";
+import EditTrade from "./Adminpanel/Edittrade/EditTrade";
 function App() {
   axios.defaults.withCredentials = true;
   axios.defaults.baseURL = 'http://localhost:3001';
@@ -66,6 +67,7 @@ function App() {
             <Route path="/invest/:id" element={<Invest />} />
             <Route path="/dashboard" element={<Dashbord />} />
             <Route path="/addtrade" element={<Addtrade />} />
+            <Route path="/edittrade/:id" element={<EditTrade />} />
             <Route path="/addprofit/:id" element={<Addprofit />} />
             <Route path="/addcashwallet" element={<Addcashwallet />} />
             <Route path="/withdrawcashwallet" element={<Withdrawcashwallet />} />

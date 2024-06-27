@@ -84,6 +84,15 @@ export const getTrades = async () => {
 export const viewTradeProfit = async (id) => {
     return await commonrequest("GET", `/viewTradeProfit/${id}`);
 };
+export const getThisTrade = async (id) => {
+    return await commonrequest("GET", `/getThisTrade/${id}`);
+};
+export const deleteTrade = async (id) => {
+    return await commonrequest("GET", `/deleteTrade/${id}`);
+};
+export const updateTrade = async (data) => {
+    return await commonrequest("POST", `/updateTrade`, data);
+};
 
 export const tradeProfit = async (data) => {
     return await commonrequest("POST", `/tradeProfit`, data);

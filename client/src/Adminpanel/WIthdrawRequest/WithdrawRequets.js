@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router';
 // import { UserContext } from '../../UserContext/userContext';
 import { acceptWithdrawal, deleteWithdrawal, getWithdrwalRequest } from '../../Service/Apis';
 import { toast } from 'react-toastify';
+import { UserContext } from '../../UserContext/userContext';
 
 function WithdrawRequets() {
     const [withdraw, setWithdraw] = useState();
@@ -66,6 +67,9 @@ function WithdrawRequets() {
             toast.error('An error occurred while accepting withdrawal request');
         }
     };
+    const { userData } = useContext(UserContext);
+
+    if (userData.role !== "admin") { return (<>You are not admin </>) }
     return (
         <div>
             <h1>WithdrawRequets</h1>

@@ -1,49 +1,75 @@
-import React, { useContext, useState } from 'react'
-import './Bankaccount.css'
+import React, { useContext, useState } from 'react';
+import './Bankaccount.css';
 import { UserContext } from '../../../UserContext/userContext';
 import { useNavigate, useParams } from 'react-router';
 import { bankDetails } from '../../../Service/Apis';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
+
 function BankAccount() {
-    const [bank, setBank] = useState();
-    const [rebank, setRebank] = useState();
-    const [ifsc, setIfsc] = useState();
+    const [bank, setBank] = useState('');
+    const [rebank, setRebank] = useState('');
+    const [ifsc, setIfsc] = useState('');
     const [upi, setUpi] = useState('');
     const { userData } = useContext(UserContext);
     const { id } = useParams();
     const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(false);
+
+
     const submit = async () => {
         if (bank !== rebank) {
             toast.error('Bank account numbers do not match');
             return;
         }
+
+        if (!bank || !rebank || !ifsc) {
+            toast.error('All fields except UPI ID are required');
+            return;
+        }
+
+        // Start loading
+        setIsLoading(true);
+
         const data = {
             bank, rebank, ifsc, upi, user: userData.id, id
         };
-        const response = await bankDetails(data);
-        if (response.status === 200) {
-            navigate('/adhaarverification');
-        } else {
-            toast.error(response.data.error);
+
+        try {
+            const response = await bankDetails(data);
+            if (response.status === 200) {
+                navigate('/adhaarverification');
+            } else {
+                toast.error(response.data.error);
+            }
+        } catch (error) {
+            console.error('Error adding bank details:', error);
+            toast.error('Failed to add bank details. Please try again.');
+        } finally {
+            // Stop loading
+            setIsLoading(false);
         }
     };
+
     const goBack = (e) => {
         e.preventDefault();
-        navigate(-1)
+        navigate(-1);
+    };
 
-    }
     const handleKeyDown = (e) => {
         if (e.key === 'Backspace') {
-            // Remove the last character from the input value
             setIfsc((prevIfsc) => prevIfsc.slice(0, -1));
         } else {
-            // Convert the entered key to uppercase and append it to the input value
             const uppercaseKey = e.key.toUpperCase();
             setIfsc((prevIfsc) => prevIfsc + uppercaseKey);
         }
     };
+    if (userData.role !== "verified" && userData.role !== "verifying" && userData.role !== "unverified") {
+        return (<>Please login</>);
+    }
+
     return (
         <div className="bankaccount">
+            <ToastContainer />
             <section className="content">
                 <header className="rectangle-parent">
                     <div className="frame-child" />
@@ -70,6 +96,8 @@ function BankAccount() {
                         <input
                             className="field-labels-child"
                             type="password"
+                            value={bank}
+                            required
                             onChange={(e) => setBank(e.target.value)}
                         />
                     </div>
@@ -82,6 +110,8 @@ function BankAccount() {
                         <input
                             className="field-labels-child"
                             type="text"
+                            value={rebank}
+                            required
                             onChange={(e) => setRebank(e.target.value)}
                         />
                     </div>
@@ -94,11 +124,12 @@ function BankAccount() {
                         <input
                             className="field-labels-child"
                             type="text"
-                            // onChange={(e) => setIfsc(e.target.value.toUpperCase())} 
                             value={ifsc}
+                            required
                             onKeyDown={handleKeyDown}
                         />
                     </div>
+
                     <div className="field-labels1">
                         <div className="re-enter-bank-account-no-wrapper">
                             <div className="re-enter-bank-account">
@@ -107,6 +138,7 @@ function BankAccount() {
                         </div>
                         <input className="field-labels-child"
                             type="text"
+                            value={upi}
                             onChange={(e) => setUpi(e.target.value)}
                         />
                     </div>
@@ -116,14 +148,18 @@ function BankAccount() {
                 <button className="rectangle-group" onClick={submit}>
                     <div className="rectangle-div" />
                     <div className="send-code-parent">
-                        <div className="send-code">Send code</div>
-                        <div className="frame-child1" />
-                        <b className="continue">Continue</b>
+                        {isLoading ? (
+                            <span className="loading-text">Loading...</span>
+                        ) : (
+                            <>
+                                <b className="continue">Continue</b>
+                            </>
+                        )}
                     </div>
                 </button>
             </footer>
         </div>
-    )
+    );
 }
 
-export default BankAccount
+export default BankAccount;

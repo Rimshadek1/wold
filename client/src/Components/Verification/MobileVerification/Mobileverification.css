@@ -242,3 +242,7 @@
     line-height: normal;
     letter-spacing: normal;
 }
+
+.numbervefi .error-messages {
+    font-size: 10%;
+}

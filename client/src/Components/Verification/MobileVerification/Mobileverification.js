@@ -1,34 +1,40 @@
-import React, { useContext, useState } from 'react'
-import './Mobileverification.css'
-import { UserContext } from '../../../UserContext/userContext';
+import React, { useContext, useState } from 'react';
+import './Mobileverification.css';
 import { useNavigate } from 'react-router';
-import { mobileOtpSent } from '../../../Service/Apis';
 import { toast, ToastContainer } from 'react-toastify';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../../../UserContext/userContext';
+
 function Mobileverification() {
-    const [mobileNumber, setMobileNumber] = useState();
-    const { userData } = useContext(UserContext);
+    const [mobileNumber, setMobileNumber] = useState('');
+    const [isValid, setIsValid] = useState(true);
     const navigate = useNavigate();
-    const submit = async () => {
-        if (!mobileNumber) {
-            toast.error('mobileNumber');
-        } else if (!userData.id) {
-            toast.error('userdata');
-        }
-        const data = {
-            mobile: mobileNumber,
-            userId: userData.id
-        }
-        const response = await mobileOtpSent(data);
-        if (response.status === 200) {
-            navigate(`/mobileotp/${mobileNumber}`)
-        } else {
-            toast.error('otp send failed');
-        }
-    }
+    const { userData } = useContext(UserContext);
+
     const goBack = (e) => {
         e.preventDefault();
-        navigate(-1)
+        navigate(-1);
+    };
 
+    const handleMobileNumberChange = (e) => {
+        const value = e.target.value;
+        const regex = /^[0-9]{10}$/;
+        if (regex.test(value)) {
+            setIsValid(true);
+        } else {
+            setIsValid(false);
+        }
+        setMobileNumber(value);
+    };
+
+    const handleSendCodeClick = (e) => {
+        if (!isValid) {
+            e.preventDefault();
+            toast.error('Please enter a valid 10-digit mobile number.');
+        }
+    };
+    if (userData.role !== "verified" && userData.role !== "verifying" && userData.role !== "unverified") {
+        return (<>Please login</>);
     }
 
     return (
@@ -69,23 +75,30 @@ function Mobileverification() {
                         <div className="frame-inner" />
                         <div className="di">+91</div>
                         <input
-                            className="input"
+                            className={`input ${isValid ? '' : 'invalid'}`}
                             placeholder=""
                             type="text"
-                            onChange={(e) => setMobileNumber(e.target.value)}
+                            onChange={handleMobileNumberChange}
+                            value={mobileNumber}
+                            required
                         />
+                        {!isValid && <div className="error-messages" style={{ fontSize: "10px", width: "100%" }}>Please enter a valid 10-digit mobile number.</div>}
                     </div>
                 </section>
             </main>
             <footer className="frame-footer">
-                <button className="rectangle-container" onClick={submit}>
+                <Link
+                    to={isValid ? `/bankaccount/${mobileNumber}` : '#'}
+                    className="rectangle-container"
+                    onClick={handleSendCodeClick}
+                >
                     <div className="rectangle-div" />
-                    <b className="send-code">Send code</b>
-                </button>
+                    <b className="send-code">Continue</b>
+                </Link>
             </footer>
             <ToastContainer />
         </div>
-    )
+    );
 }
 
-export default Mobileverification
+export default Mobileverification;

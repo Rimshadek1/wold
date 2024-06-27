@@ -2,13 +2,13 @@ import { Link, useNavigate } from 'react-router-dom';
 import './home.css';
 import { getTrades } from '../../Service/Apis';
 import { useContext, useEffect, useState } from 'react';
-import axios from 'axios';
 import { UserContext } from '../../UserContext/userContext';
-
+import LoadingSpinner from '../Loadingpagr/LoadingSpinner';
 function Home() {
     const [trades, setTrades] = useState([]);
     const [countries, setCountries] = useState([]);
     const { userData } = useContext(UserContext);
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     useEffect(() => {
         fetchTrades();
@@ -17,6 +17,7 @@ function Home() {
 
     const fetchTrades = async () => {
         try {
+            setLoading(true);
             const response = await getTrades();
             if (response.status === 200) {
                 const tradesData = response.data.trades;
@@ -36,6 +37,8 @@ function Home() {
             console.error('Error fetching trades:', error);
             setTrades([]);
         }
+        setLoading(false)
+
     };
     const fetchCountries = async () => {
         try {
@@ -72,7 +75,12 @@ function Home() {
             navigate(`/tradedetails/${trade._id}`);
         }
     };
-
+    if (loading) {
+        return <LoadingSpinner />;
+    }
+    if (userData.role !== "verified" && userData.role !== "verifying" && userData.role !== "unverified") {
+        return (<>Please login</>);
+    }
     return (
         <div className="home">
             <div className="rectangle-parent">
@@ -99,7 +107,8 @@ function Home() {
             </div>
             <main className="progress">
                 <section className="frame-parent">
-                    {userData.role !== 'verified' && (
+
+                    {userData.role === 'unverified' && (
                         <Link to='/mobileverification' className="rectangle-group">
                             <div className="frame-item" />
                             <div className="frame-inner" />
@@ -115,6 +124,40 @@ function Home() {
                             </div>
                         </Link>
                     )}
+
+                    {userData.role === 'verifying' && (
+                        <div className="rectangle-group">
+                            <div className="frame-item" />
+                            <div className="frame-inner" />
+                            <div className="progress-circle">
+                                <div className="progress-circle-child" />
+                                <div className="div">{progressValue}</div>
+                            </div>
+                            <div className="progress-caption">
+                                <div className="youre-halfway-there-parent">
+                                    <div className="youre-halfway-there">{progressText}</div>
+                                    <div className="verify-your-account">{progressSubText}</div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* {userData.role !== 'verified' && (
+                        <Link to='/mobileverification' className="rectangle-group">
+                            <div className="frame-item" />
+                            <div className="frame-inner" />
+                            <div className="progress-circle">
+                                <div className="progress-circle-child" />
+                                <div className="div">{progressValue}</div>
+                            </div>
+                            <div className="progress-caption">
+                                <div className="youre-halfway-there-parent">
+                                    <div className="youre-halfway-there">{progressText}</div>
+                                    <div className="verify-your-account">{progressSubText}</div>
+                                </div>
+                            </div>
+                        </Link>
+                    )} */}
                     <div className="india-banner">
                         {trades.map(trade => {
                             const fundedPercentage = ((trade.totalShares - trade.sharesAvailable) / trade.totalShares) * 100;
@@ -125,7 +168,7 @@ function Home() {
                                             className="rectangle-icon"
                                             loading="lazy"
                                             alt=""
-                                            src={`${axios.defaults.baseURL}/${trade.productImage}`}
+                                            src={trade.productImage ? trade.productImage : ""}
                                         />
                                         <div className="india-content">
                                             <div className="india-card">

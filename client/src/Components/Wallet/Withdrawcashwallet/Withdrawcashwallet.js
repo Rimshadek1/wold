@@ -1,46 +1,92 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../UserContext/userContext';
 import { useNavigate } from 'react-router';
-import { withdrawRequest } from '../../../Service/Apis';
-import { useWallet } from '../../../UserContext/WalletContext';
+import { userTransaction, withdrawRequest } from '../../../Service/Apis';
+import { toast, ToastContainer } from 'react-toastify';
+import LoadingSpinner from '../../Loadingpagr/LoadingSpinner';
 
 function Withdrawcashwallet() {
     const [amount, setAmount] = useState('');
     const { userData } = useContext(UserContext);
     const navigate = useNavigate();
-    const { balance } = useWallet();
+    const [balances, setBalances] = useState(0);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
     const goBack = (e) => {
         e.preventDefault();
+        setLoading(true);
         navigate(-1);
+        setLoading(false);
+    };
+    const fetchData = async () => {
+        try {
+            setLoading(true);
+            if (!userData || !userData.id) {
+                toast.error('User data is missing.');
+                return;
+            }
+
+            const response = await userTransaction(userData.id);
+            if (response.status === 200) {
+                setBalances(response.data.balance)
+            }
+        } catch (error) {
+            toast.error('An error occurred while fetching requests');
+        }
+        setLoading(false)
     }
     const handlePayment = async () => {
-        const isConfirmed = window.confirm(
-            'Withdrawal request: It may take 2 working days for verification. Do you want to proceed?'
-        );
-        if (isConfirmed) {
-            if (parseFloat(amount) <= parseFloat(balance)) {
-                const data = {
-                    amount: parseFloat(amount),
-                    id: userData.id,
-                    username: userData.email
-                };
-                const response = await withdrawRequest(data);
+        if (amount === '') {
+            toast.error("please enter the amount")
+        } else {
 
-                if (response.status === 200) {
-                    alert('Withdrawal request accepted. Please wait for the transaction.');
-                    window.location.reload();
+            const isConfirmed = window.confirm(
+                'Withdrawal request: It may take 2 working days for verification. Do you want to proceed?'
+            );
 
-                    navigate('/wallet');
+            if (isConfirmed) {
+                if (parseFloat(amount) <= parseFloat(balances)) {
+                    const data = {
+                        amount: parseFloat(amount),
+                        id: userData.id,
+                        username: userData.email
+                    };
+
+                    try {
+                        setLoading(true);
+                        const response = await withdrawRequest(data);
+
+                        if (response.status === 200) {
+                            alert('Withdrawal request accepted. Please wait for the transaction.');
+                            navigate('/wallet');
+
+                        } else {
+                            alert('Withdrawal request failed. Try again after some time.');
+                        }
+                    } catch (error) {
+                        console.error('Withdrawal request error:', error);
+                        alert('Withdrawal request failed. Please try again later.');
+                    }
                 } else {
-                    alert('Withdrawal request failed. Try again after some time.');
+                    toast.error('Insufficient funds in your account.');
                 }
-            } else {
-                alert('Insufficient funds in your account.');
+                setLoading(false);
             }
         }
     };
+    if (userData.role !== "verified" && userData.role !== "verifying" && userData.role !== "unverified") {
+        return (<>Please login</>);
+    }
+    if (loading) {
+        return <LoadingSpinner />;
+    }
+
     return (
         <div className="deposit">
+            <ToastContainer />
             <div className="layout">
                 <header className="content">
                     <div className="content-child" />
@@ -59,7 +105,7 @@ function Withdrawcashwallet() {
             <main className="sidebar">
                 <section className="balance-container">
                     <div className="balance-label">
-                        <div className="wallet-balance">Wallet balance :- {balance}</div>
+                        <div className="wallet-balance">Wallet balance :- {balances}</div>
                     </div>
                     <input
                         className="withdraw-container"
@@ -81,7 +127,7 @@ function Withdrawcashwallet() {
                 </button>
             </footer>
         </div>
-    )
+    );
 }
 
-export default Withdrawcashwallet
+export default Withdrawcashwallet;

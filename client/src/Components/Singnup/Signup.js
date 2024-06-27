@@ -9,6 +9,8 @@ function Signup() {
     const [fullNameInput, setFullNameInput] = useState('');
     const [emailInput, setEmailInput] = useState('');
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
+
 
     const handleFullNameChange = (event) => setFullNameInput(event.target.value);
     const handleEmailChange = (event) => setEmailInput(event.target.value);
@@ -34,6 +36,7 @@ function Signup() {
         const data = { fullName: fullNameInput, email: emailInput };
 
         try {
+            setLoading(true);
             const response = await sendEmail(data);
             if (response.status === 200) {
                 toast.success('Success! Please check your email for further instructions.');
@@ -45,10 +48,12 @@ function Signup() {
                 toast.error('An error occurred. Please try again later.');
                 console.error('Error sending email:', response);
             }
+
         } catch (error) {
-            toast.error('An unexpected error occurred. Please try again later.');
-            console.error('Unexpected error during email sending:', error);
+            toast.error(error.response.data.error);
+            console.error('Unexpected error during email sending:', error.response.data.error);
         }
+        setLoading(false);
     };
 
     return (
@@ -107,7 +112,7 @@ function Signup() {
                 <ToastContainer />
                 <button className="rectangle-group" onClick={submit}>
                     <div className="frame-item" />
-                    <div className="continue">Continue</div>
+                    <div className="continue">{loading ? 'Loading...' : 'Continue'}</div>
                 </button>
             </footer>
         </div>

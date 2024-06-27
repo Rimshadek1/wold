@@ -1,41 +1,61 @@
-import React, { useEffect, useState } from 'react';
-import './Dashboard.css'; // Import your CSS file for styling (optional)
-import { Link, useParams } from 'react-router-dom';
-import { getTrades } from '../../Service/Apis'; // Import your API function to get trades
-import axios from 'axios';
+import React, { useContext, useEffect, useState } from 'react';
+import './Dashboard.css';
+import { Link, } from 'react-router-dom';
+import { getTrades, deleteTrade } from '../../Service/Apis';
+import { toast, ToastContainer } from 'react-toastify';
+import { UserContext } from '../../UserContext/userContext';
 
 function Dashboard() {
     const [trades, setTrades] = useState([]);
-
+    const { userData } = useContext(UserContext);
     useEffect(() => {
         fetchTrades();
     }, []);
 
     const fetchTrades = async () => {
-        try {
-            const response = await getTrades();
-            if (response.status === 200) {
-                const tradesData = response.data.trades;
-                if (Array.isArray(tradesData)) {
-                    setTrades(tradesData);
-                } else if (typeof tradesData === 'object' && tradesData !== null) {
-                    setTrades([tradesData]);
+        if (userData.role === "admin") {
+            try {
+                const response = await getTrades();
+                if (response.status === 200) {
+                    const tradesData = response.data.trades;
+                    if (Array.isArray(tradesData)) {
+                        setTrades(tradesData);
+                    } else if (typeof tradesData === 'object' && tradesData !== null) {
+                        setTrades([tradesData]);
+                    } else {
+                        console.error('Trades data is not in expected format:', tradesData);
+                        setTrades([]);
+                    }
                 } else {
-                    console.error('Trades data is not in expected format:', tradesData);
+                    console.error('Failed to fetch trades:', response.status);
                     setTrades([]);
                 }
-            } else {
-                console.error('Failed to fetch trades:', response.status);
+            } catch (error) {
+                console.error('Error fetching trades:', error);
                 setTrades([]);
             }
+
+        }
+    };
+    const handleDeleteTrade = async (tradeId) => {
+        try {
+            const response = await deleteTrade(tradeId);
+            if (response.status === 200) {
+                toast.success("Trade successfully deleted");
+                fetchTrades(); // Refresh the list of trades
+            } else {
+                toast.error("Failed to delete trade");
+            }
         } catch (error) {
-            console.error('Error fetching trades:', error);
-            setTrades([]);
+            console.error('Error deleting trade:', error);
+            toast.error("An error occurred while deleting the trade");
         }
     };
 
+    if (userData.role !== "admin") { return (<>You are not admin </>) }
     return (
         <div className="dashboard-container">
+            <ToastContainer />
             <div className="button-container">
                 <Link to='/addtrade' className="add-trade-button">Add Trade</Link>
                 <Link to='/verifyadhaar' className="veri-adhar-button">Verify Adhaar</Link>
@@ -84,12 +104,14 @@ function Dashboard() {
                             <td>{trade.totalCIFPrice}</td>
                             <td>{trade.totalShares}</td>
                             <td>{trade.sharesAvailable}</td>
-                            <td><img src={`${axios.defaults.baseURL}/${trade.productImage}`} alt="Product" width="50" /></td>
-                            <td><a href={`${axios.defaults.baseURL}/${trade.investorMemoPort}`} target="_blank" width="50" rel="noopener noreferrer">View Memo</a></td>
-                            <td><img src={`${axios.defaults.baseURL}/${trade.logochange}`} alt="logo" width="50" /></td>
+                            <td><img src={trade.productImage ? trade.productImage : ""} alt="Product" width="50" /></td>
+                            <td><a href={trade.investorMemoPort ? trade.investorMemoPort : ""} target="_blank" rel="noopener noreferrer">View Memo</a></td>
+                            <td><img src={trade.logochange ? trade.logochange : ""} alt="logo" width="50" /></td>
                             <td>
-                                <button className="action-button">Edit</button>
-                                <button className="action-button">Delete</button>
+                                <Link to={`/edittrade/${trade._id}`} className="action-button" > Edit</Link>
+
+                                <button className="action-button" onClick={() => handleDeleteTrade(trade._id)}>Delete</button>
+
                                 <Link
                                     to={`/addprofit/${trade._id}`}
                                     className="action-button"

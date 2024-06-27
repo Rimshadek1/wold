@@ -37,7 +37,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 45px 27px 16px;
+    padding: 2.5% 5%;
     box-sizing: border-box;
     gap: 66px;
     top: 0;
@@ -59,17 +59,16 @@
 }
 
 .emailotp .android-large-6-inner {
-    width: 265px;
+    width: 80%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0 20px 29px 0;
     box-sizing: border-box;
+    padding-right: 5%;
 }
 
 .emailotp .img-20240513-wa0004-icon {
-    align-self: stretch;
     flex: 1;
     position: relative;
     max-width: 100%;
@@ -100,6 +99,8 @@
     flex-direction: column;
     align-items: flex-end;
     gap: 13px;
+    align-items: center;
+    justify-content: center;
 }
 
 .emailotp .otp-message-wrapper {
@@ -277,7 +278,7 @@
 .emailotp .otp-content-wrapper {
     align-self: stretch;
     flex-direction: row;
-    padding: 0 15px 228.3px 16px;
+    padding: 0 5% 15% 5%;
 }
 
 .emailotp .frame-child1 {
@@ -349,17 +350,27 @@
     margin: 10px auto;
     display: flex;
     gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .emailotp input {
-    width: 24px;
-    height: 24px;
+    width: 10%;
+    height: 80%;
     padding: 10px;
     text-align: center;
     background-color: #f6f7f9;
     border-radius: 9px;
+    border: 1px solid #d0d0d0;
+    font-size: 16px;
+    /* Adjust font size for better readability */
+    transition: border-color 0.2s ease-in-out;
 
     &:focus {
-        border: 2px solid#31ba77;
+        border-color: #31ba77;
+        /* Adjust focus color */
+        outline: none;
     }
 }
+
+@media screen and (min-width: 401px) {}

@@ -1,59 +1,117 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './invest.css'
 import { useNavigate, useParams } from 'react-router';
-import { getTrade, purchase } from '../../Service/Apis';
+import { getTrade, purchase, userTransaction } from '../../Service/Apis';
 import { UserContext } from '../../UserContext/userContext';
 import { ToastContainer, toast } from 'react-toastify';
-import axios from 'axios';
+import LoadingSpinner from '../Loadingpagr/LoadingSpinner';
 function Invest() {
     const navigate = useNavigate();
     const { id } = useParams();
-    const [trade, setTrade] = useState([]);
-    const [shares, setShares] = useState(1);
+    const [trade, setTrade] = useState(null); // Initialize trade state with null or appropriate initial value
+    const [shares, setShares] = useState(1); // Initialize shares state with 1 or appropriate initial value
     const { userData } = useContext(UserContext);
+    const [balances, setBalances] = useState(0);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        details();
+        fetchData();
     }, []);
+
+    useEffect(() => {
+        // Fetch trade details when component mounts
+        if (id) {
+            details();
+        }
+    }, [id]); // Add id to dependency array to re-fetch trade details when id changes
 
     const goBack = (e) => {
         e.preventDefault();
-        navigate(-1)
+        setLoading(true);
+        navigate(-1);
+        setLoading(false);
+    };
+    const fetchData = async () => {
+        try {
+            setLoading(true);
+            if (!userData || !userData.id) {
+                toast.error('User data is missing.');
+                return;
+            }
+
+            const response = await userTransaction(userData.id);
+            if (response.status === 200) {
+                setBalances(response.data.balance)
+            }
+        } catch (error) {
+            toast.error('An error occurred while fetching requests');
+        }
+        setLoading(false)
     }
     const details = async () => {
-        const response = await getTrade(id);
-        if (response.status === 200) {
-            setTrade(response.data.trade);
+        try {
+            setLoading(true);
+            const response = await getTrade(id);
+            if (response.status === 200) {
+                setTrade(response.data.trade);
+            }
+        } catch (error) {
+            console.error('Error fetching trade details:', error);
+            // Handle error (e.g., toast.error)
         }
+        setLoading(false);
     };
+
     const incrementShares = () => {
-        if (shares < trade.sharesAvailable) { // Ensure shares don't exceed available shares
+        if (trade && shares < trade.sharesAvailable) {
             setShares(prevShares => prevShares + 1);
         }
     };
 
     const decrementShares = () => {
-        if (shares > 1) { // Ensure shares don't go below 1
+        if (shares > 1) {
             setShares(prevShares => prevShares - 1);
         }
     };
+
     const handleInvest = async (e) => {
         e.preventDefault();
+        if (!trade) return; // Ensure trade data is available
+
+        const totalPrice = (trade.totalCIFPrice / trade.totalShares) * shares;
+        if (totalPrice > balances) {
+            toast.error("Insufficient funds, please add to your wallet");
+            return;
+        }
+
         const data = {
-            totalPrice: trade.totalCIFPrice / trade.totalShares * shares,
+            totalPrice: totalPrice,
             items: trade._id,
             id: userData.id,
             purchasedQuanity: shares
+        };
+        try {
+            setLoading(true);
+            const response = await purchase(data);
+            if (response.status === 200) {
+                toast.success('Item added to your portfolio');
+                navigate('/portfolio');
+            } else {
+                toast.error(response.error);
+            }
+        } catch (error) {
+            console.error('Error purchasing item:', error);
+            toast.error('Error purchasing item. Please try again.', error.response.data.error); // Handle error
         }
-        const response = await purchase(data);
-        if (response.status === 200) {
-            toast.success('item added to your portfolio');
-            navigate('/portfolio')
-        } else {
-            toast.error(response.error)
-        }
+        setLoading(false);
+    };
+    if (loading) {
+        return <LoadingSpinner />;
     }
-    console.log(trade);
+    if (userData.role !== "verified" && userData.role !== "verifying" && userData.role !== "unverified") {
+        return (<>Please login</>);
+    }
+    if (!trade) return null;
     return (
         <div className="cart">
             <img className="cart-child" alt="" src="/invest/group-8779.svg" />
@@ -112,13 +170,13 @@ function Invest() {
                             <img
                                 className="rectangle-icon"
                                 alt=""
-                                src={`${axios.defaults.baseURL}/${trade.productImage}`}
+                                src={trade.productImage ? trade.productImage : ""}
                             />
                             <img
                                 className="skilaa-2-icon"
                                 loading="lazy"
                                 alt=""
-                                src={`${axios.defaults.baseURL}/${trade.logochange}`}
+                                src={trade.logochange ? trade.logochange : ""}
                             />
                         </div>
                     </div>

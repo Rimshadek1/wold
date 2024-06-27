@@ -3,15 +3,18 @@ import './profile.css'
 import { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../UserContext/userContext';
 import { profileGet } from '../../Service/Apis';
-import axios from 'axios';
+import LoadingSpinner from '../Loadingpagr/LoadingSpinner';
 function Profile() {
     const navigate = useNavigate();
     const { userData } = useContext(UserContext);
     const [dp, setDp] = useState({});
+    const [loading, setLoading] = useState(false);
+
     const goBack = (e) => {
         e.preventDefault();
+        setLoading(true);
         navigate(-1)
-
+        setLoading(false);
     }
     const logOut = (e) => {
         e.preventDefault();
@@ -24,6 +27,7 @@ function Profile() {
     }, []);
     const dps = async () => {
         try {
+            setLoading(true);
             const response = await profileGet(userData.id);
             if (response.status === 200) {
                 setDp(response.data);
@@ -33,10 +37,15 @@ function Profile() {
             }
         } catch (error) {
             console.error("Error fetching profile:", error);
-            alert("Error fetching profile");
         }
+        setLoading(false);
     };
-
+    if (loading) {
+        return <LoadingSpinner />;
+    }
+    if (userData.role !== "verified" && userData.role !== "verifying" && userData.role !== "unverified") {
+        return (<>Please login</>);
+    }
     return (
         <div className="profile">
             <main className="android-large-13">
@@ -62,7 +71,7 @@ function Profile() {
                                             className="frame-item"
                                             loading="lazy"
                                             alt=""
-                                            src={`${axios.defaults.baseURL}/${dp.profilepicture}`}
+                                            src={dp.profilepicture}
                                         />
                                     ) : (
                                         <img
@@ -191,93 +200,93 @@ function Profile() {
                                     src="/profile/right.svg"
                                 />
                             </div>
-                </Link>
+                        </Link>
                     </div>
-            </section >
-            <section className="frame-section">
-                <div className="frame-parent10">
-                    <button className="frame-button">
-                        <div className="frame-child3" />
-                        <div className="frame-wrapper4">
-                            <img className="group-icon" alt="" src="/profile/academy.svg" />
-                        </div>
-                        <div className="wold-academy-wrapper">
-                            <div className="wold-academy">Wold academy</div>
-                        </div>
-                        <img className="vector-icon10" alt="" src="/profile/right.svg" />
-                    </button>
-                    <button className="rectangle-parent1">
-                        <div className="frame-child4" />
-                        <img className="icon-earth" alt="" src="/profile/earth.svg" />
-                        <div className="exporter-portel-wrapper">
-                            <div className="exporter-portel">Exporter Portel</div>
-                        </div>
-                        <img className="vector-icon11" alt="" src="/profile/right.svg" />
-                    </button>
-                    <Link to="/ownerdash" className="rectangle-parent2">
-                        <div className="frame-child5" />
-                        <div className="frame-parent11">
-                            <div className="frame-wrapper5">
-                                <div className="vector-group">
-                                    <img
-                                        className="vector-icon12"
-                                        alt=""
-                                        src="/profile/w.svg"
-                                    />
-                                    <img
-                                        className="vector-icon13"
-                                        loading="lazy"
-                                        alt=""
-                                        src="/profile/d.svg"
-                                    />
-                                    <img
-                                        className="vector-icon14"
-                                        loading="lazy"
-                                        alt=""
-                                        src="/profile/0.svg"
-                                    />
-                                    <img
-                                        className="vector-icon15"
-                                        loading="lazy"
-                                        alt=""
-                                        src="/profile/l.svg"
-                                    />
-                                    <img
-                                        className="vector-icon16"
-                                        loading="lazy"
-                                        alt=""
-                                        src="/profile/o.svg"
-                                    />
-                                    <img
-                                        className="vector-icon17"
-                                        loading="lazy"
-                                        alt=""
-                                        src="/profile/vector-17.svg"
-                                    />
-                                </div>
+                </section >
+                <section className="frame-section">
+                    <div className="frame-parent10">
+                        <button className="frame-button">
+                            <div className="frame-child3" />
+                            <div className="frame-wrapper4">
+                                <img className="group-icon" alt="" src="/profile/academy.svg" />
                             </div>
-                            <div className="owners">Owners</div>
-                        </div>
-                        <div className="frame-wrapper6">
-                            <img
-                                className="frame-child6"
-                                loading="lazy"
-                                alt=""
-                                src="/profile/right.svg"
-                            />
-                        </div>
-                    </Link>
-                    <button className="rectangle-parent1" onClick={logOut}>
-                        <div className="frame-child4" />
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <div className="exporter-portel-wrapper">
-                            <div className="exporter-portel">Logout</div>
-                        </div>
-                        <img className="vector-icon11" alt="" src="/profile/right.svg" />
-                    </button>
-                </div>
-            </section >
-        </main >
+                            <div className="wold-academy-wrapper">
+                                <div className="wold-academy">Wold academy</div>
+                            </div>
+                            <img className="vector-icon10" alt="" src="/profile/right.svg" />
+                        </button>
+                        <button className="rectangle-parent1">
+                            <div className="frame-child4" />
+                            <img className="icon-earth" alt="" src="/profile/earth.svg" />
+                            <div className="exporter-portel-wrapper">
+                                <div className="exporter-portel">Exporter Portel</div>
+                            </div>
+                            <img className="vector-icon11" alt="" src="/profile/right.svg" />
+                        </button>
+                        <Link to="/ownerdash" className="rectangle-parent2">
+                            <div className="frame-child5" />
+                            <div className="frame-parent11">
+                                <div className="frame-wrapper5">
+                                    <div className="vector-group">
+                                        <img
+                                            className="vector-icon12"
+                                            alt=""
+                                            src="/profile/w.svg"
+                                        />
+                                        <img
+                                            className="vector-icon13"
+                                            loading="lazy"
+                                            alt=""
+                                            src="/profile/d.svg"
+                                        />
+                                        <img
+                                            className="vector-icon14"
+                                            loading="lazy"
+                                            alt=""
+                                            src="/profile/0.svg"
+                                        />
+                                        <img
+                                            className="vector-icon15"
+                                            loading="lazy"
+                                            alt=""
+                                            src="/profile/l.svg"
+                                        />
+                                        <img
+                                            className="vector-icon16"
+                                            loading="lazy"
+                                            alt=""
+                                            src="/profile/o.svg"
+                                        />
+                                        <img
+                                            className="vector-icon17"
+                                            loading="lazy"
+                                            alt=""
+                                            src="/profile/vector-17.svg"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="owners">Owners</div>
+                            </div>
+                            <div className="frame-wrapper6">
+                                <img
+                                    className="frame-child6"
+                                    loading="lazy"
+                                    alt=""
+                                    src="/profile/right.svg"
+                                />
+                            </div>
+                        </Link>
+                        <button className="rectangle-parent1" onClick={logOut}>
+                            <div className="frame-child4" />
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <div className="exporter-portel-wrapper">
+                                <div className="exporter-portel">Logout</div>
+                            </div>
+                            <img className="vector-icon11" alt="" src="/profile/right.svg" />
+                        </button>
+                    </div>
+                </section >
+            </main >
 
         </div >
     )

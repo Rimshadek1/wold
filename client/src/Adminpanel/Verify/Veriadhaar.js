@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { adhaarDelete, adhaarveri, adhaarverification } from '../../Service/Apis';
-import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
+import { UserContext } from '../../UserContext/userContext';
 
 function Veriadhaar() {
     const [usersdata, setusersdata] = useState([])
@@ -27,9 +27,11 @@ function Veriadhaar() {
                 datas(); // Refresh data without reloading
             } else {
                 toast.error('Failed to verify user');
+                datas();
             }
         } catch (error) {
             toast.error('Failed to verify user');
+            datas();
         }
     };
 
@@ -43,10 +45,12 @@ function Veriadhaar() {
                 toast.error('Failed to delete user');
             }
         } catch (error) {
-            toast.error('Failed to delete user');
+            toast.error('Failed to delete user', error.response.data.message);
         }
     };
+    const { userData } = useContext(UserContext);
 
+    if (userData.role !== "admin") { return (<>You are not admin </>) }
     return (
         <div>
             <h1>Veriadhaar</h1>
@@ -57,7 +61,10 @@ function Veriadhaar() {
                         <th>Aadhaar Back</th>
                         <th>Date of Birth</th>
                         <th>PAN Number</th>
-                        <th>User ID</th>
+                        <th>Mobile Number</th>
+                        <th>fullName</th>
+                        <th>A/c no.</th>
+                        <th>IFSC</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -65,14 +72,17 @@ function Veriadhaar() {
                     {usersdata.map(user => (
                         <tr key={user._id}>
                             <td>
-                                <img src={`${axios.defaults.baseURL}/${user.aadhaarFront}`} alt="Aadhaar Front" width="100" />
+                                <img src={user.aadhaarFront} alt="Aadhaar Front" width="100" />
                             </td>
                             <td>
-                                <img src={`${axios.defaults.baseURL}/${user.aadhaarBack}`} alt="Aadhaar Back" width="100" />
+                                <img src={user.aadhaarBack} alt="Aadhaar Back" width="100" />
                             </td>
-                            <td>{user.dob}</td>
-                            <td>{user.panNumber}</td>
-                            <td>{user.user}</td>
+                            <td>{user.dob ? user.dob : "not mention"}</td>
+                            <td>{user.panNumber ? user.panNumber : "not mention"}</td>
+                            <td>{user.mobile}</td>
+                            <td>{user.fullName}</td>
+                            <td>{user.bank}</td>
+                            <td>{user.ifsc}</td>
                             <td>
                                 <button onClick={() => verifys(user.user)}>Verify</button>
                                 <button onClick={() => Deletes(user.user)}>Delete</button>

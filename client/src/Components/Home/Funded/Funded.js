@@ -3,13 +3,13 @@ import '../home.css';
 import { useContext, useEffect, useState } from 'react';
 import { getTrades } from '../../../Service/Apis';
 import { UserContext } from '../../../UserContext/userContext';
-import axios from 'axios';
+import LoadingSpinner from '../../Loadingpagr/LoadingSpinner';
 
 function Funded() {
     const [trades, setTrades] = useState([]);
     const [countries, setCountries] = useState([]);
     const { userData } = useContext(UserContext);
-
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
         fetchTrades();
         fetchCountries();
@@ -17,6 +17,7 @@ function Funded() {
 
     const fetchTrades = async () => {
         try {
+            setLoading(true);
             const response = await getTrades();
             if (response.status === 200) {
                 const tradesData = response.data.trades;
@@ -36,8 +37,11 @@ function Funded() {
             console.error('Error fetching trades:', error);
             setTrades([]);
         }
+        setLoading(false)
     };
-
+    if (loading) {
+        return <LoadingSpinner />;
+    }
     const fetchCountries = async () => {
         try {
             const response = await fetch('https://restcountries.com/v2/all');
@@ -66,6 +70,9 @@ function Funded() {
         const fundingPercentage = ((trade.totalShares - trade.sharesAvailable) / trade.totalShares) * 100;
         return fundingPercentage === 100 && !trade.profit;
     });
+    if (userData.role !== "verified" && userData.role !== "verifying" && userData.role !== "unverified") {
+        return (<>Please login</>);
+    }
     return (
         <div className="home">
             <div className="rectangle-parent">
@@ -92,7 +99,7 @@ function Funded() {
             </div>
             <main className="progress">
                 <section className="frame-parent">
-                    {userData.role !== 'verified' && (
+                    {userData.role === 'unverified' && (
                         <Link to='/mobileverification' className="rectangle-group">
                             <div className="frame-item" />
                             <div className="frame-inner" />
@@ -108,6 +115,23 @@ function Funded() {
                             </div>
                         </Link>
                     )}
+
+                    {userData.role === 'verifying' && (
+                        <div className="rectangle-group">
+                            <div className="frame-item" />
+                            <div className="frame-inner" />
+                            <div className="progress-circle">
+                                <div className="progress-circle-child" />
+                                <div className="div">{progressValue}</div>
+                            </div>
+                            <div className="progress-caption">
+                                <div className="youre-halfway-there-parent">
+                                    <div className="youre-halfway-there">{progressText}</div>
+                                    <div className="verify-your-account">{progressSubText}</div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                     <div className="india-banner">
                         {fundedTrades.length > 0 ? (
                             fundedTrades.map(trade => (
@@ -117,7 +141,7 @@ function Funded() {
                                         className="rectangle-icon"
                                         loading="lazy"
                                         alt=""
-                                        src={`${axios.defaults.baseURL}/${trade.productImage}`}
+                                        src={trade.productImage ? trade.productImage : ""}
                                     />
                                     <div className="india-content">
                                         <div className="india-card">

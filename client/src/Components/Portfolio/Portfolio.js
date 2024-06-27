@@ -3,19 +3,21 @@ import './portfolio.css'
 import { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../UserContext/userContext';
 import { portfolioValue } from '../../Service/Apis';
-import axios from 'axios';
 import dayjs from 'dayjs';
+import LoadingSpinner from '../Loadingpagr/LoadingSpinner';
 function Portfolio() {
     const { userData } = useContext(UserContext);
     const [portFolio, setPortfolio] = useState([]);
     const [monthlyIncome, setMonthlyIncome] = useState(0);
     const [totalIncome, setTotalIncome] = useState(0);
+    const [loading, setLoading] = useState(false);
+
     useEffect(() => {
         fetchPortfolioData();
     }, []);
     const fetchPortfolioData = async () => {
         try {
-
+            setLoading(true);
             const response = await portfolioValue(userData.id);
             if (response.status === 200) {
                 setPortfolio(response.data);
@@ -24,6 +26,7 @@ function Portfolio() {
         } catch (error) {
             console.error("Error fetching portfolio data:", error);
         }
+        setLoading(false);
     };
     // const calculateTotalValue = () => {
     //     return portFolio.reduce((total, item) => {
@@ -50,7 +53,7 @@ function Portfolio() {
     const calculateIncome = (portfolioData) => {
         const currentMonth = dayjs().month();
         const currentYear = dayjs().year();
-
+        setLoading(true);
         let monthlyIncome = 0;
         let totalIncome = 0;
 
@@ -68,9 +71,15 @@ function Portfolio() {
         });
         setMonthlyIncome(monthlyIncome);
         setTotalIncome(totalIncome);
+        setLoading(false);
     };
 
-
+    if (loading) {
+        return <LoadingSpinner />;
+    }
+    if (userData.role !== "verified" && userData.role !== "verifying" && userData.role !== "unverified") {
+        return (<>Please login</>);
+    }
     return (
         <div className="portfolio">
             <header className="content-rect-parent">
@@ -114,48 +123,19 @@ function Portfolio() {
                 <div className="frame-parent">
                     <div className="monthly-income-details-parent">
                         <div className="monthly-income-details">
-                            <div className="monthly-income">Monthly income</div>
+                            <div className="monthly-income">Total income</div>
                             <div className="monthly-income-values">
-                                <div className="income-placeholder">{monthlyIncome.toFixed(2)}</div>
+                                <div className="income-placeholder">{totalIncome.toFixed(2)}</div>
                             </div>
                         </div>
                         <div className="total-income-parent">
-                            <div className="total-income">Total income</div>
+                            <div className="total-income">Number of trades</div>
                             <div className="total-income-values">
-                                <div className="total-income-placeholder">{totalIncome.toFixed(2)}</div>
+                                <div className="total-income-placeholder">{portFolio.length}</div>
                             </div>
                         </div>
                     </div>
-                    <div className="frame-group">
-                        <div className="asset-appriciation-parent">
-                            <div className="asset-appriciation">Total invested</div>
-                            <div className="wrapper">
-                                <div className="div">16000</div>
-                            </div>
-                        </div>
-                        <div className="number-of-trades-parent">
-                            <div className="number-of-trades">Number of trades</div>
-                            <div className="container">
-                                <div className="div1">{portFolio.length}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="frame-container">
-                        <div className="portfolio-occupancy-parent">
-                            <div className="portfolio-occupancy">Total invested</div>
-                            <div className="frame">
-                                <div className="div2">11%</div>
-                            </div>
-                        </div>
-                        <div className="annualised-trade-yeild-parent">
-                            <div className="annualised-trade-yeild">
-                                Total earned
-                            </div>
-                            <div className="frame-div">
-                                <div className="div3">18%</div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </section>
             <div className="trades-label">
@@ -170,13 +150,13 @@ function Portfolio() {
                                 <img
                                     className="trades-shapes-child"
                                     alt=""
-                                    src={`${axios.defaults.baseURL}/${item.trade.productImage}`}
+                                    src={item.trade.productImage ? item.trade.productImage : ""}
                                 />
                                 <img
                                     className="skilaa-2-icon"
                                     loading="lazy"
                                     alt=""
-                                    src={`${axios.defaults.baseURL}/${item.trade.logochange}`}
+                                    src={item.trade.logochange ? item.trade.logochange : ""}
                                 />
                             </div>
                         </div>

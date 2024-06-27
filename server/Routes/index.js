@@ -35,9 +35,21 @@ router.post("/changePass", userHelper.changePass);
 //admins
 
 router.post("/generateCode", userHelper.generateCode);
-router.post('/addtrades', upload.fields([{ name: 'productImage' }, { name: 'investorMemoPort' }, { name: 'logochange' }]), adminHelper.addTrades);
+router.post('/addtrades', upload.fields([
+    { name: 'productImage' },
+    { name: 'investorMemoPort' },
+    { name: 'logochange' }
+]), adminHelper.addTrades);
+
 router.get('/gettrades', adminHelper.gettrades);
 router.get('/viewTradeProfit/:id', adminHelper.viewTradeProfit);
+router.get('/getThisTrade/:id', adminHelper.getThisTrade);
+router.get('/deleteTrade/:id', adminHelper.deleteTrade);
+router.post('/updateTrade', upload.fields([
+    { name: 'productImage' },
+    { name: 'investorMemoPort' },
+    { name: 'logochange' }
+]), adminHelper.updateTrade);
 router.post('/tradeProfit', adminHelper.tradeProfit);
 router.post('/pupdate10', adminHelper.pupdate10);
 router.get('/viewpupdate10', adminHelper.viewpupdate10);

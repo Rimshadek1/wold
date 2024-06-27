@@ -12,6 +12,8 @@ function Password() {
     const otpandname = new URLSearchParams(window.location.search).get('otp');
     const otp = otpandname.substring(0, 6);
     const name = otpandname.substring(12);
+    const [loading, setLoading] = useState(false);
+
 
     const handlePasswordChange = (event) => {
         setPassword(event.target.value);
@@ -33,6 +35,7 @@ function Password() {
 
         };
         try {
+            setLoading(true);
             const response = await createUser(data);
             localStorage.setItem('authToken', response.data.token);
             if (response.status === 200) {
@@ -57,6 +60,7 @@ function Password() {
                 console.error('Error:', error.message);
                 toast.error('An unexpected error occurred. Please try again later.');
             }
+            setLoading(false);
         }
     };
 
@@ -130,7 +134,7 @@ function Password() {
             <footer className="frame-footer">
                 <button className="rectangle-group" onClick={handleSubmit}>
                     <div className="rectangle-div" />
-                    <div className="create-account">Create Account</div>
+                    <div className="create-account">{loading ? 'Loading...' : 'Create Account'}</div>
                 </button>
                 <ToastContainer />
             </footer>

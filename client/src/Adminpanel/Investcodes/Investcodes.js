@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { generateCode } from '../../Service/Apis';
 import { useNavigate } from 'react-router';
+import { UserContext } from '../../UserContext/userContext';
 
 function Investcodes() {
     const [investcode, setInvsetCode] = useState();
@@ -18,6 +19,9 @@ function Investcodes() {
             navigate('/dashboard');
         }
     }
+    const { userData } = useContext(UserContext);
+
+    if (userData.role !== "admin") { return (<>You are not admin </>) }
     return (
         <div className="addtrade-container">
             <h2>Set Code</h2>

@@ -2,14 +2,18 @@ import { useNavigate, useParams } from 'react-router';
 import './tradedetails.css'
 import { Link } from 'react-router-dom';
 import { getTrade } from '../../Service/Apis';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
+import LoadingSpinner from '../Loadingpagr/LoadingSpinner';
+import { UserContext } from '../../UserContext/userContext';
 function Tradedetails() {
 
     const navigate = useNavigate();
     const { id } = useParams();
     const [trade, setTrade] = useState([]);
     const [countries, setCountries] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const { userData } = useContext(UserContext);
 
     useEffect(() => {
         details();
@@ -17,13 +21,17 @@ function Tradedetails() {
     }, []);
     const goBack = (e) => {
         e.preventDefault();
-        navigate(-1)
-    }
+        setLoading(true);
+        navigate(-1);
+        setLoading(false);
+    };
     const details = async () => {
+        setLoading(true);
         const response = await getTrade(id);
         if (response.status === 200) {
             setTrade(response.data.trade);
         }
+        setLoading(false);
     };
     const fetchCountries = async () => {
         try {
@@ -37,6 +45,12 @@ function Tradedetails() {
             console.error('Error fetching countries:', error);
         }
     };
+    if (loading) {
+        return <LoadingSpinner />;
+    }
+    if (userData.role !== "verified" && userData.role !== "verifying" && userData.role !== "unverified") {
+        return (<>Please login</>);
+    }
     return (
         <div className="tradedetails">
             <div className="open-child" />
@@ -170,7 +184,7 @@ function Tradedetails() {
                         <img
                             className="investment-info-icon"
                             alt=""
-                            src={`${axios.defaults.baseURL}/${trade.productImage}`}
+                            src={trade.productImage ? trade.productImage : ""}
                         />
                         <div onClick={goBack} className="ellipse-parent">
                             <div className="ellipse-div" />
@@ -194,7 +208,7 @@ function Tradedetails() {
                                     className="skilaa-2-icon"
                                     loading="lazy"
                                     alt=""
-                                    src={`${axios.defaults.baseURL}/${trade.logochange}`}
+                                    src={trade.logochange ? trade.logochange : ""}
                                 />
                                 <div className="infoportex-wrapper">
                                     <div className="infoportex">
@@ -216,7 +230,7 @@ function Tradedetails() {
                                 }
                             </div>
                         </div>
-                        <a className="group-div" href={`${axios.defaults.baseURL}/${trade.investorMemoPort}`} target="_blank" width="50" rel="noopener noreferrer">
+                        <a className="group-div" href={trade.investorMemoPort ? trade.investorMemoPort : ""} target="_blank" width="50" rel="noopener noreferrer">
                             <div className="frame-child4" />
                             <div className="frame-wrapper3">
                                 <img

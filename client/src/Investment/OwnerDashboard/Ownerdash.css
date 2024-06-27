@@ -127,6 +127,7 @@
     display: inline-block;
     min-width: 21px;
     z-index: 3;
+    color: #ffff
 }
 
 .ownerdash .invest-image-parent {
@@ -206,6 +207,7 @@
     font-size: 12px;
     color: #31ba77;
     font-family: Poppins;
+    text-decoration: none;
 }
 
 .ownerdash .frame-item {
@@ -710,11 +712,41 @@
     z-index: 1;
 }
 
+.ownerdash .invests {
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Poppins;
+    color: #111c30;
+    text-align: center;
+    display: inline-block;
+    min-width: 47px;
+    z-index: 1;
+    margin-left: 10px;
+}
+
 .ownerdash .group-button {
     cursor: pointer;
     border: 0;
     padding: 11px 20px 12px 21px;
     background-color: #31ba77;
+    align-self: stretch;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.ownerdash .group-buttoning {
+    cursor: pointer;
+    border: 0;
+    padding: 11px 20px 12px 21px;
+    background-color: #1c4632;
     align-self: stretch;
     border-radius: 9px;
     display: flex;

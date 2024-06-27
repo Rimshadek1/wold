@@ -8,6 +8,8 @@ function Emailotp() {
     const [otp, setOtp] = useState(new Array(6).fill(""));
     const { id } = useParams();
     const name = new URLSearchParams(window.location.search).get('name');
+    const [loading, setLoading] = useState(false);
+
 
     const navigate = useNavigate();
     if (!id) {
@@ -33,8 +35,8 @@ function Emailotp() {
                 email: id
             }
             try {
+                setLoading(true);
                 const response = await checkOtp(data);
-
                 if (response.status === 200) {
                     toast.success("Validated, please set your password");
                     navigate(`/password/${id}?otp=${otp.join('')}?name=${name}`);
@@ -55,6 +57,7 @@ function Emailotp() {
                     console.error('Error', error.message);
                     toast.error('An error occurred: ' + error.message);
                 }
+                setLoading(false);
             }
         }
     }
@@ -115,7 +118,7 @@ function Emailotp() {
             <footer className="android-large-6-child">
                 <button className="rectangle-group">
                     <div className="frame-child1" />
-                    <div className="continue" onClick={submit}>Continue</div>
+                    <div className="continue" onClick={submit}>{loading ? 'Loading...' : 'Continue'}</div>
                 </button>
                 <ToastContainer />
             </footer>

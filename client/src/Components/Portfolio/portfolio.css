@@ -411,10 +411,10 @@
 }
 
 .portfolio .frame-parent {
-    height: 222.9px;
+    /* height: 222.9px; */
     flex: 1;
     flex-direction: column;
-    padding: 0 0 81.3px;
+    /* padding: 0 0 81.3px; */
     gap: 21.1px;
 }
 

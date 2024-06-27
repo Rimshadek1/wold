@@ -4,16 +4,19 @@ import { useContext, useEffect, useState } from 'react';
 import { profileAdd, profileGet } from '../../../Service/Apis';
 import { UserContext } from '../../../UserContext/userContext';
 import { toast, ToastContainer } from 'react-toastify';
-import axios from 'axios';
+import LoadingSpinner from '../../Loadingpagr/LoadingSpinner';
 function Inprofile() {
 
     const navigate = useNavigate();
     const { userData } = useContext(UserContext);
     const [dp, setDp] = useState({});
+    const [loading, setLoading] = useState(false);
+
     const goBack = (e) => {
         e.preventDefault();
-        navigate(-1)
-
+        setLoading(true);
+        navigate(-1);
+        setLoading(false);
     }
     const handleImageClick = () => {
         // Trigger file input click when the display picture is clicked
@@ -48,6 +51,7 @@ function Inprofile() {
     }, []);
     const dps = async () => {
         try {
+            setLoading(true)
             const response = await profileGet(userData.id);
             if (response.status === 200) {
                 setDp(response.data);
@@ -57,11 +61,13 @@ function Inprofile() {
             }
         } catch (error) {
             console.error("Error fetching profile:", error);
-            alert("Error fetching profile");
         }
+        setLoading(false)
     };
 
-
+    if (loading) {
+        return <LoadingSpinner />;
+    }
 
     return (
         <div className="inprofile">
@@ -90,7 +96,7 @@ function Inprofile() {
                                     className="frame-item"
                                     loading="lazy"
                                     alt=""
-                                    src={`${axios.defaults.baseURL}/${dp.profilepicture}`}
+                                    src={dp.profilepicture}
                                 />
                             ) : (
                                 <img

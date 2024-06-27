@@ -67,7 +67,9 @@ function Login() {
                 <div className="email-address" >Email Address</div>
             </div>
             <section className="android-large-22-inner">
-                <input className="frame-child" type="text" onChange={(e) => setEmail(e.target.value)} />
+                <input className="frame-child" type="text"
+                    onChange={(e) => setEmail(e.target.value.toLowerCase())}
+                />
             </section>
             <div className="password-field">
                 <div className="password">Password</div>

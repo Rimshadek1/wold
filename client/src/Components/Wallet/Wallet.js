@@ -1,23 +1,24 @@
 import { useContext, useEffect, useState } from 'react';
 import './wallet.css'
 import { Link } from 'react-router-dom';
-// import { useWallet } from '../../UserContext/WalletContext';
 import { UserContext } from '../../UserContext/userContext';
 import { toast, ToastContainer } from 'react-toastify';
 import { portfolioValue, userTransaction } from '../../Service/Apis';
-import { useWallet } from '../../UserContext/WalletContext';
+import LoadingSpinner from '../Loadingpagr/LoadingSpinner';
 
 function Wallet() {
     const [transaction, setTransaction] = useState(false);
-    const { balance } = useWallet();
     const { userData } = useContext(UserContext);
     const [totalIncome, setTotalIncome] = useState(0);
+    const [balances, setBalances] = useState(0);
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
         fetchData();
         fetchPortfolioData();
     }, []);
     const fetchData = async () => {
         try {
+            setLoading(true);
             if (!userData || !userData.id) {
                 toast.error('User data is missing.');
                 return;
@@ -26,14 +27,17 @@ function Wallet() {
             const response = await userTransaction(userData.id);
             if (response.status === 200) {
                 setTransaction(response.data.transactions);
+                setBalances(response.data.balance)
             }
         } catch (error) {
             toast.error('An error occurred while fetching requests');
         }
+        setLoading(false)
     }
+
     const fetchPortfolioData = async () => {
         try {
-
+            setLoading(true);
             const response = await portfolioValue(userData.id);
             if (response.status === 200) {
                 calculateIncome(response.data);
@@ -41,9 +45,12 @@ function Wallet() {
         } catch (error) {
             console.error("Error fetching portfolio data:", error);
         }
+        setLoading(false)
     };
-    const calculateIncome = (portfolioData) => {
 
+
+    const calculateIncome = (portfolioData) => {
+        setLoading(true);
         let totalIncome = 0;
 
         portfolioData.forEach(item => {
@@ -54,8 +61,11 @@ function Wallet() {
             }
         });
         setTotalIncome(totalIncome);
+        setLoading(false);
     };
-
+    if (loading) {
+        return <LoadingSpinner />;
+    }
     const getAmountColor = (trans) => {
         switch (trans.status || trans.request) {
             case 'placed':
@@ -115,9 +125,9 @@ function Wallet() {
                 return "/wallet/desktop.svg";
         }
     }
-
-
-
+    if (userData.role !== "verified" && userData.role !== "verifying" && userData.role !== "unverified") {
+        return (<>Please login</>);
+    }
 
     return (
         <div className="wallet">
@@ -134,7 +144,7 @@ function Wallet() {
                                     <div className="total-balance">Total Balance</div>
                                     <div className="inr-25000">
                                         <span className="inr">{`INR  `}</span>
-                                        <span className="span">{balance.toFixed(2)}</span>
+                                        <span className="span">{balances.toFixed(2)}</span>
                                     </div>
                                 </div>
                             </div>
@@ -250,22 +260,20 @@ function Wallet() {
                                 <div className="frame-child3" />
                                 <div className="frame-child4" />
                             </div>
-                            <img className="frame-child5" alt="" src="/wallet/ellipse-186.svg" />
                             <img
                                 className="arrow-right-icon2"
                                 loading="lazy"
                                 alt=""
                                 src="/wallet/withdraw.svg"
                             />
+                            <img className="frame-child5" alt="" src="/wallet/ellipse-186.svg" />
+
                         </Link>
                         <div className="frame-wrapper3">
                             <div className="withdraw-parent">
                                 <div className="withdraw">Withdraw</div>
                                 <div className="withdraw-group">
                                     <div className="withdraw1">Withdraw</div>
-                                    <div className="withdraw2">
-                                        Withdraw
-                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -16,6 +16,8 @@ const path = require('path');
 const fs = require('fs');
 const emails = process.env.EMAIL
 const password = process.env.PASSWORD
+const buckets = process.env.DO_SPACES_BUCKET;
+const { S3Client, DeleteObjectCommand } = require('@aws-sdk/client-s3');
 
 var instance = new Razorpay({
     key_id: 'rzp_test_u6AqTKt0lLlp8S',
@@ -29,6 +31,16 @@ const transporter = nodemailer.createTransport({
         pass: password
     }
 });
+
+const s3Client = new S3Client({
+    region: 'us-east-1', // Replace with your DigitalOcean Spaces region
+    endpoint: process.env.DO_SPACES_ENDPOINT, // Endpoint for DigitalOcean Spaces
+    credentials: {
+        accessKeyId: process.env.DO_SPACES_ACCESS_KEY,
+        secretAccessKey: process.env.DO_SPACES_SECRET_KEY,
+    },
+});
+
 
 
 exports.sendOtpMail = async (req, res) => {
@@ -438,7 +450,7 @@ exports.purchase = async (req, res) => {
             date: new Date(),
             status: 'done',
             type: 'purchased',
-            purchasedQuanity: purchasedQuanity, // Consistent naming
+            purchasedQuanity: purchasedQuanity,
         };
 
         // Fetch trade details efficiently
@@ -467,7 +479,7 @@ exports.purchase = async (req, res) => {
                 }
             } else {
                 // Not enough shares available
-                res.status(400).json({ status: 'Not enough shares available' });
+                res.status(400).json({ error: 'Not enough shares available' });
                 return;
             }
         }
@@ -476,7 +488,7 @@ exports.purchase = async (req, res) => {
         res.status(500).json({ status: 'Failed to process purchase' });
     } catch (error) {
         console.error('Error processing purchase:', error);
-        res.status(500).json({ status: 'Internal Server Error' }); // Generic error for client
+        res.status(500).json({ error: 'Internal Server Error' }); // Generic error for client
     }
 };
 
@@ -649,8 +661,8 @@ exports.detailsAdhaar = async (req, res) => {
     try {
         const tradeData = {
             ...req.body,
-            aadhaarFront: req.files.aadhaarFront ? req.files.aadhaarFront[0].path : null,
-            aadhaarBack: req.files.aadhaarBack ? req.files.aadhaarBack[0].path : null,
+            aadhaarFront: req.files.aadhaarFront ? req.files.aadhaarFront[0].location : null,
+            aadhaarBack: req.files.aadhaarBack ? req.files.aadhaarBack[0].location : null,
         };
 
         const filter = { user: new ObjectId(req.body.user) };
@@ -678,28 +690,42 @@ exports.detailsAdhaar = async (req, res) => {
     }
 };
 
+
+
 exports.profileAdd = async (req, res) => {
     try {
         const { user } = req.body;
-        const newImagePath = req.files.image ? req.files.image[0].path : null;
+        const newImagePath = req.files && req.files.image ? req.files.image[0].location : null;
+
+
 
         // Fetch the current profile picture path from the database
         const userRecord = await db.get().collection(collection.userCollection).findOne({ _id: new ObjectId(user) });
 
+
         if (userRecord && userRecord.profilepicture && userRecord.profilepicture.image) {
             const oldImagePath = userRecord.profilepicture.image;
-            const fullOldImagePath = path.join(__dirname, '..', oldImagePath);
-            // Delete the existing image file
-            fs.unlink(fullOldImagePath, (err) => {
-                if (err) {
-                    console.error('Error deleting old profile picture:', err);
-                } else {
-                    console.log('Old profile picture deleted successfully');
-                }
-            });
+            const oldImageKey = oldImagePath.split('/').pop(); // Extract the key from the URL
+
+
+
+            // Delete the existing image from DigitalOcean Spaces
+            const deleteParams = {
+                Bucket: buckets,
+                Key: oldImageKey
+            };
+            try {
+                const deleteCommand = new DeleteObjectCommand(deleteParams);
+
+                await s3Client.send(deleteCommand);
+                console.log('Old profile picture deleted successfully from DigitalOcean Spaces');
+            } catch (err) {
+                console.error('Error deleting old profile picture from DigitalOcean Spaces:', err);
+            }
         }
 
         const profilepicture = { image: newImagePath };
+
 
         // Update the database with the new image path
         const update = await db.get().collection(collection.userCollection).updateOne(
@@ -717,6 +743,9 @@ exports.profileAdd = async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 };
+
+
+
 exports.profileGet = async (req, res) => {
     const user = req.params.id;
     try {
